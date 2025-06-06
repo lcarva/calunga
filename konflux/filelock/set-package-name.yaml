@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: filelock
+  name: filelock
+spec:
+  image:
+    name: calunga-tenant/filelock
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: filelock
+spec:
+  componentName: filelock
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/filelock

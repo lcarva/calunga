@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: hatch-vcs
+  name: hatch-vcs
+spec:
+  image:
+    name: calunga-tenant/hatch-vcs
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: hatch-vcs
+spec:
+  componentName: hatch-vcs
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/hatch-vcs

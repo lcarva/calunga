@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: pyproject-metadata
+  name: pyproject-metadata
+spec:
+  image:
+    name: calunga-tenant/pyproject-metadata
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: pyproject-metadata
+spec:
+  componentName: pyproject-metadata
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/pyproject-metadata

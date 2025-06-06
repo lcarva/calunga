@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: soupsieve
+  name: soupsieve
+spec:
+  image:
+    name: calunga-tenant/soupsieve
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: soupsieve
+spec:
+  componentName: soupsieve
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/soupsieve

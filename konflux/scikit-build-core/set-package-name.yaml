@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: scikit-build-core
+  name: scikit-build-core
+spec:
+  image:
+    name: calunga-tenant/scikit-build-core
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: scikit-build-core
+spec:
+  componentName: scikit-build-core
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/scikit-build-core

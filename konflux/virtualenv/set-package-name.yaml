@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: virtualenv
+  name: virtualenv
+spec:
+  image:
+    name: calunga-tenant/virtualenv
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: virtualenv
+spec:
+  componentName: virtualenv
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/virtualenv

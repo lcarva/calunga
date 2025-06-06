@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: mypy-extensions
+  name: mypy-extensions
+spec:
+  image:
+    name: calunga-tenant/mypy-extensions
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: mypy-extensions
+spec:
+  componentName: mypy-extensions
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/mypy-extensions

@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: sniffio
+  name: sniffio
+spec:
+  image:
+    name: calunga-tenant/sniffio
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: sniffio
+spec:
+  componentName: sniffio
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/sniffio

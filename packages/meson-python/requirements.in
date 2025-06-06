@@ -1,0 +1,5 @@
+meson-python
+# Force these build dependencies as it doesn't seem to be detected pybuild-deps...
+ninja
+patchelf
+hatch-fancy-pypi-readme

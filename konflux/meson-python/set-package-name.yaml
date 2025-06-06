@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: meson-python
+  name: meson-python
+spec:
+  image:
+    name: calunga-tenant/meson-python
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: meson-python
+spec:
+  componentName: meson-python
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/meson-python

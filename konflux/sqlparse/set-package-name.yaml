@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: sqlparse
+  name: sqlparse
+spec:
+  image:
+    name: calunga-tenant/sqlparse
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: sqlparse
+spec:
+  componentName: sqlparse
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/sqlparse

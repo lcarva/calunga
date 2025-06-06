@@ -2,44 +2,71 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - anyio
   - arrow
   - attrs
   - beautifulsoup4
   - black
   - blinker
+  - cachetools
+  - calver
+  - chardet
   - charset-normalizer
   - click
   - colorama
+  - distlib
   - django
   - docutils
+  - filelock
   - freezegun
   - hatch-fancy-pypi-readme
   - hatchling
+  - hatch-vcs
+  - httpcore
   - httpx
   - humanize
   - idna
+  - iniconfig
   - isort
   - jinja2
   - loguru
   - markdown
+  - markdown-it-py
+  - markupsafe
   - marshmallow
+  - mdurl
+  - meson-python
   - more-itertools
+  - mypy
+  - mypy-extensions
   - ninja
   - numpy
   - packaging
   - patchelf
   - pathspec
+  - platformdirs
   - pluggy
   - prompt-toolkit
   - pygments
+  - pyproject-api
+  - pyproject-metadata
   - pytest
   - python-dateutil
   - requests
   - rich
+  - scikit-build-core
+  - setuptools-scm
+  - sniffio
+  - soupsieve
+  - sqlparse
   - tomlkit
   - tox
   - tqdm
   - trove-classifiers
+  - types-psutil
+  - types-python-dateutil
+  - types-setuptools
   - typing-extensions
   - urllib3
+  - virtualenv
   - wheel

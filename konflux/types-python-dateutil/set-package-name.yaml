@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: types-python-dateutil
+  name: types-python-dateutil
+spec:
+  image:
+    name: calunga-tenant/types-python-dateutil
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: types-python-dateutil
+spec:
+  componentName: types-python-dateutil
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/types-python-dateutil

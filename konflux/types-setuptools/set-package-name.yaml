@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: types-setuptools
+  name: types-setuptools
+spec:
+  image:
+    name: calunga-tenant/types-setuptools
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: types-setuptools
+spec:
+  componentName: types-setuptools
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/types-setuptools

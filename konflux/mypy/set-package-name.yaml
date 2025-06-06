@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: mypy
+  name: mypy
+spec:
+  image:
+    name: calunga-tenant/mypy
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: mypy
+spec:
+  componentName: mypy
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/mypy

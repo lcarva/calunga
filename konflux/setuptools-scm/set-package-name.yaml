@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: setuptools-scm
+  name: setuptools-scm
+spec:
+  image:
+    name: calunga-tenant/setuptools-scm
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: setuptools-scm
+spec:
+  componentName: setuptools-scm
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/setuptools-scm

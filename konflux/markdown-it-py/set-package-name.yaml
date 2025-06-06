@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: markdown-it-py
+  name: markdown-it-py
+spec:
+  image:
+    name: calunga-tenant/markdown-it-py
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: markdown-it-py
+spec:
+  componentName: markdown-it-py
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/markdown-it-py

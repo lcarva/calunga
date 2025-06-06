@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: iniconfig
+  name: iniconfig
+spec:
+  image:
+    name: calunga-tenant/iniconfig
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: iniconfig
+spec:
+  componentName: iniconfig
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/iniconfig
