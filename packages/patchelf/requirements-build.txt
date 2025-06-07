@@ -42,9 +42,9 @@ pluggy==1.6.0 \
     --hash=sha256:7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3 \
     --hash=sha256:e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746
     # via hatchling
-scikit-build-core==0.11.3 \
-    --hash=sha256:74baf7cbc089f8621cc0646d9c5679034d5be1b014c10912dc32a4bcd1092506 \
-    --hash=sha256:9f222e10021734367a749c8062ed12119bea82d451d07674a2de9bff4832bbea
+scikit-build-core==0.11.4 \
+    --hash=sha256:0d3e3463c332979a0c07340241b162d6cb0059a7a1bee6465c38ace49d441596 \
+    --hash=sha256:5b194bbb04092ae327d294b23e4bbffb6181adce4259440a86c9cf6abb8eaa6c
     # via
     #   ninja
     #   patchelf
