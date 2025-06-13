@@ -18,7 +18,7 @@ spec:
         - name: url
           value: 'https://github.com/lcarva/calunga.git'
         - name: revision
-          value: main
+          value: release-ta
         - name: pathInRepo
           value: release/pipeline.yaml
       resolver: git
