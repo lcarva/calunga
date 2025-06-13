@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: bokeh
+  name: bokeh
+spec:
+  image:
+    name: calunga-tenant/bokeh
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: bokeh
+spec:
+  componentName: bokeh
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/bokeh

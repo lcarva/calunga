@@ -8,6 +8,7 @@ resources:
   - beautifulsoup4
   - black
   - blinker
+  - bokeh
   - cachetools
   - calver
   - chardet
@@ -20,8 +21,8 @@ resources:
   - filelock
   - freezegun
   - hatch-fancy-pypi-readme
-  - hatchling
   - hatch-vcs
+  - hatchling
   - httpcore
   - httpx
   - humanize
