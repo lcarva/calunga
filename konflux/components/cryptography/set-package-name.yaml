@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: cryptography
+  name: cryptography
+spec:
+  image:
+    name: calunga-tenant/cryptography
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: cryptography
+spec:
+  componentName: cryptography
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/cryptography
