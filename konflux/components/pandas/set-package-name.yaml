@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: pandas
+  name: pandas
+spec:
+  image:
+    name: calunga-tenant/pandas
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: pandas
+spec:
+  componentName: pandas
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/pandas
