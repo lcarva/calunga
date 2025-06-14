@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: rsa
+  name: rsa
+spec:
+  image:
+    name: calunga-tenant/rsa
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: rsa
+spec:
+  componentName: rsa
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/rsa

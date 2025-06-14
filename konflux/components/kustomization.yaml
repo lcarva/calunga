@@ -10,6 +10,7 @@ resources:
   - black
   - blinker
   - bokeh
+  - boto3
   - botocore
   - cachetools
   - calver
@@ -64,7 +65,9 @@ resources:
   - pyyaml
   - requests
   - rich
+  - rsa
   - s3fs
+  - s3transfer
   - scikit-build-core
   - setuptools-scm
   - sniffio
