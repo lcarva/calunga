@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: google-api-core
+  name: google-api-core
+spec:
+  image:
+    name: calunga-tenant/google-api-core
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: google-api-core
+spec:
+  componentName: google-api-core
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/google-api-core

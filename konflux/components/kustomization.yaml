@@ -22,6 +22,7 @@ resources:
   - docutils
   - filelock
   - freezegun
+  - google-api-core
   - grpcio-status
   - hatch-fancy-pypi-readme
   - hatch-vcs
