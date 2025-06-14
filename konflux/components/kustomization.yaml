@@ -47,6 +47,7 @@ resources:
   - ninja
   - numpy
   - packaging
+  - pandas
   - patchelf
   - pathspec
   - platformdirs
