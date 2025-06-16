@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: pyasn1-modules
+  name: pyasn1-modules
+spec:
+  image:
+    name: calunga-tenant/pyasn1-modules
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: pyasn1-modules
+spec:
+  componentName: pyasn1-modules
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/pyasn1-modules
