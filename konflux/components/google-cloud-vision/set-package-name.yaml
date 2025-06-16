@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: google-cloud-vision
+  name: google-cloud-vision
+spec:
+  image:
+    name: calunga-tenant/google-cloud-vision
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: google-cloud-vision
+spec:
+  componentName: google-cloud-vision
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/google-cloud-vision
