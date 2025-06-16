@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: aiohttp
+  name: aiohttp
+spec:
+  image:
+    name: calunga-tenant/aiohttp
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: aiohttp
+spec:
+  componentName: aiohttp
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/aiohttp
