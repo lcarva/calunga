@@ -25,6 +25,7 @@ resources:
   - filelock
   - freezegun
   - fsspec
+  - googleapis-common-protos
   - grpcio-status
   - hatch-fancy-pypi-readme
   - hatch-vcs

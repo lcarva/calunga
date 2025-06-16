@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: googleapis-common-protos
+  name: googleapis-common-protos
+spec:
+  image:
+    name: calunga-tenant/googleapis-common-protos
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: googleapis-common-protos
+spec:
+  componentName: googleapis-common-protos
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/googleapis-common-protos
