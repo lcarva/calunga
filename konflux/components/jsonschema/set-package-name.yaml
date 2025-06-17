@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: jsonschema
+  name: jsonschema
+spec:
+  image:
+    name: calunga-tenant/jsonschema
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: jsonschema
+spec:
+  componentName: jsonschema
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/jsonschema
