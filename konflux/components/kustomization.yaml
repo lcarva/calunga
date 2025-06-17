@@ -62,6 +62,7 @@ resources:
   - mypy-extensions
   - ninja
   - numpy
+  - oscrypto
   - packaging
   - pandas
   - patchelf
