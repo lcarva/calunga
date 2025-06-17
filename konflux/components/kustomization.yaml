@@ -30,6 +30,7 @@ resources:
   - freezegun
   - fsspec
   - google-api-core
+  - google-auth
   - google-cloud-vision
   - googleapis-common-protos
   - grpcio-status
