@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: click-plugins
+  name: click-plugins
+spec:
+  image:
+    name: calunga-tenant/click-plugins
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: click-plugins
+spec:
+  componentName: click-plugins
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/click-plugins
