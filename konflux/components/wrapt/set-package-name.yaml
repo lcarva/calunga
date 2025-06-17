@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: wrapt
+  name: wrapt
+spec:
+  image:
+    name: calunga-tenant/wrapt
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: wrapt
+spec:
+  componentName: wrapt
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/wrapt
