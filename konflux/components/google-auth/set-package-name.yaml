@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: google-auth
+  name: google-auth
+spec:
+  image:
+    name: calunga-tenant/google-auth
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: google-auth
+spec:
+  componentName: google-auth
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/google-auth
