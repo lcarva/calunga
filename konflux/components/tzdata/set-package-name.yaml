@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: tzdata
+  name: tzdata
+spec:
+  image:
+    name: calunga-tenant/tzdata
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: tzdata
+spec:
+  componentName: tzdata
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/tzdata
