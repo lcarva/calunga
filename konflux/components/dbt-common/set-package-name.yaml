@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: dbt-common
+  name: dbt-common
+spec:
+  image:
+    name: calunga-tenant/dbt-common
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: dbt-common
+spec:
+  componentName: dbt-common
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/dbt-common

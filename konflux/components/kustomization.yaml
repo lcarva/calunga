@@ -23,6 +23,7 @@ resources:
   - click-plugins
   - colorama
   - cryptography
+  - dbt-common
   - distlib
   - django
   - docutils
