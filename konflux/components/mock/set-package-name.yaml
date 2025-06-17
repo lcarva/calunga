@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: mock
+  name: mock
+spec:
+  image:
+    name: calunga-tenant/mock
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: mock
+spec:
+  componentName: mock
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/mock
