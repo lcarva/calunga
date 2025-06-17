@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: oscrypto
+  name: oscrypto
+spec:
+  image:
+    name: calunga-tenant/oscrypto
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: oscrypto
+spec:
+  componentName: oscrypto
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/oscrypto
