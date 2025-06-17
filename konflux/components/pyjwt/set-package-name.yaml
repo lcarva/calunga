@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: pyjwt
+  name: pyjwt
+spec:
+  image:
+    name: calunga-tenant/pyjwt
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: pyjwt
+spec:
+  componentName: pyjwt
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/pyjwt

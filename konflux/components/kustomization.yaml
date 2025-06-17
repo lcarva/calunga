@@ -74,6 +74,7 @@ resources:
   - pydantic
   - pydantic-core
   - pygments
+  - pyjwt
   - pyproject-api
   - pyproject-metadata
   - pytest
