@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: annotated-types
+  name: annotated-types
+spec:
+  image:
+    name: calunga-tenant/annotated-types
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: annotated-types
+spec:
+  componentName: annotated-types
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/annotated-types

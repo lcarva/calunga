@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - aiobotocore
   - aiohttp
+  - annotated-types
   - anyio
   - appdirs
   - arrow
