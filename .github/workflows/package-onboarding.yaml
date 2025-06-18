@@ -3,21 +3,155 @@ name: Package Onboarding
 
 on:
   issues:
-    types: [labeled]
+    types: [opened,labeled]
 
 permissions:
-  contents: read
+  contents: write
+  issues: write
+  pull-requests: write
+  checks: read
+  security-events: read
 
 jobs:
-  onboard-package:
-    if: github.event.label.name == 'on-board'
+  check-scorecard:
+    if: ${{ github.event.label.name == 'new-package' || github.event.action == 'opened' }}
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-      actions: write
-      issues: read
+    outputs:
+      pass: ${{ steps.check.outputs.pass }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
+      - name: Extract package name from issue
+        id: extract
+        run: |
+          # Extract package name from issue title
+          PKG_NAME=$(echo "${{ github.event.issue.title }}" | sed -n 's/Onboard package: \([^]]*\)/\1/p')
+          echo "package_name=$PKG_NAME" >> $GITHUB_OUTPUT
+          echo "Extracted package name: $PKG_NAME"
+
+      - name: Run OpenSSF Scorecard
+        id: scorecard
+        run: |
+          RESULTS="$(docker run --rm \
+            -e GITHUB_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }} \
+            -v ${{ github.workspace }}:/repo \
+            gcr.io/openssf/scorecard:stable \
+            --checks=Contributors,Pinned-Dependencies,Signed-Releases,Binary-Artifacts,Code-Review,Dependency-Update-Tool,License,Packaging,SAST,Security-Policy,Vulnerabilities,Dangerous-Workflow,Fuzzing,CI-Tests,Token-Permissions,CII-Best-Practices,Maintained \
+            --format json \
+            --pypi ${{ steps.extract.outputs.package_name }})"
+          echo "results<<EOF" >> $GITHUB_OUTPUT
+          echo "$RESULTS" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          echo "formattedResults<<EOF" >> $GITHUB_OUTPUT
+          echo "$RESULTS" | jq -r '.checks[] | [.score, .name, .reason] | @tsv' | column -t -s $'\t' >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          echo "score<<EOF" >> $GITHUB_OUTPUT
+          echo "$RESULTS" |  jq '.score' >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Post Scorecard Results
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `## OpenSSF Scorecard Results\n\n\`\`\`\n\n\n${{ steps.scorecard.outputs.score }}\n\n${{ steps.scorecard.outputs.formattedResults }}\n\`\`\``
+            });
+
+      # Step 1: Simulate getting a numeric score and output a boolean
+      - name: Compute and output passing_score
+        id: check
+        run: |
+          score=${{ steps.scorecard.outputs.score }}
+          if (( $(echo "$score >= 7" | bc -l) )); then
+            echo "pass=true" >> $GITHUB_OUTPUT
+          else
+            echo "pass=false" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: failing-score
+        if: ${{ fromJSON(steps.scorecard.outputs.score) < 7 }}
+        run: |
+          gh issue edit ${{ github.event.issue.number }} --add-label needs-review
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  onboard-package-from-scorecard:
+    if: ${{ needs.check-scorecard.result == 'success' && needs.check-scorecard.outputs.pass == 'true' }}
+    needs: check-scorecard
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Extract package name from issue
+        id: extract
+        run: |
+          # Extract package name from issue title
+          PKG_NAME=$(echo "${{ github.event.issue.title }}" | sed -n 's/Onboard package: \([^]]*\)/\1/p')
+          echo "package_name=$PKG_NAME" >> $GITHUB_OUTPUT
+
+      - name: Create package directory and generate files
+        run: |
+          # Install python dependencies
+          python -m pip install --upgrade "pip==23.3.2"
+          python -m pip install pip-tools
+          # Workaround to https://github.com/hermetoproject/pybuild-deps/issues/304
+          pip install -e git+https://github.com/lcarva/pybuild-deps.git@handle-no-resolver#egg=pybuild_deps
+
+          # Debug information
+          echo "Python version:"
+          python --version
+          echo "pip version:"
+          pip --version
+          echo "pip-tools version:"
+          pip-compile --version
+          echo "Python path:"
+          which python
+          echo "pip path:"
+          which pip
+          echo "pip-tools path:"
+          which pip-compile
+
+          mkdir "packages/${{ steps.extract.outputs.package_name }}"
+          ./generate.sh
+
+      - name: Apply Konflux resources
+        run: |
+          echo "${{ secrets.KUBECONFIG_CONTENTS }}" > kubeconfig.yaml
+          kustomize build "konflux/components/${{ steps.extract.outputs.package_name }}" | kubectl apply -f -
+          rm -f kubeconfig.yaml
+        env:
+          KUBECONFIG: kubeconfig.yaml
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: |
+            packages/${{ steps.extract.outputs.package_name }}
+            konflux
+            .tekton
+          branch: "on-board/${{ steps.extract.outputs.package_name }}"
+          commit-message: "Onboard ${{ steps.extract.outputs.package_name }} package"
+          title: "Onboard ${{ steps.extract.outputs.package_name }} package"
+          body: |
+            Fixes: #${{ github.event.issue.number }}
+          sign-commits: true
+          signoff: true
+
+  onboard-package-from-label:
+    if: ${{ github.event.label.name == 'on-board' }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
