@@ -103,6 +103,7 @@ resources:
   - typing-extensions
   - urllib3
   - virtualenv
+  - wcwidth
   - wheel
   - widgetsnbextension
   - zipp
