@@ -48,9 +48,9 @@ importlib-metadata==8.7.0 \
     --hash=sha256:d13b81ad223b890aa16c5471f2ac3056cf76c5f10f82d6f9292f0b415f389000 \
     --hash=sha256:e5dd1551894c77868a30651cef00984d50e1002d06942a7101d34870c5f02afd
     # via opentelemetry-api
-microsoft-kiota-abstractions==1.9.3 \
-    --hash=sha256:7c74e20805ba2a0aab463027cd4c22b1536253788c0a52927977f48c832004a2 \
-    --hash=sha256:8977c134a1c0a9c850b745f76ddc478dc72c7668602a78215e348b9543fcf082
+microsoft-kiota-abstractions==1.9.4 \
+    --hash=sha256:9f57a4df61d1ff3a43f72dec8ac6055e3cb5badab0e4a9c9e679359c2720aaf7 \
+    --hash=sha256:a34fb7c12f2cb98124ec65d9060e24a7fc0878626525646993c995fd262ec1b1
     # via microsoft-kiota-http
 microsoft-kiota-http==1.9.3 \
     --hash=sha256:9a5e2b7a96524b2978e01087f415d810d6bcad7cd866d6d60595ebab2e47c56c \
