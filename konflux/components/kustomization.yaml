@@ -96,6 +96,7 @@ resources:
   - s3transfer
   - scikit-build-core
   - seaborn
+  - setuptools
   - setuptools-scm
   - sniffio
   - soupsieve
