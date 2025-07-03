@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: h11
+  name: h11
+spec:
+  image:
+    name: calunga-tenant/h11
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: h11
+spec:
+  componentName: h11
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/h11
