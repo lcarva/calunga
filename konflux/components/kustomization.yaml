@@ -99,6 +99,7 @@ resources:
   - seaborn
   - setuptools
   - setuptools-scm
+  - six
   - sniffio
   - soupsieve
   - sqlparse
