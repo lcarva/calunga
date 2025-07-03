@@ -21,6 +21,7 @@ resources:
   - charset-normalizer
   - click
   - colorama
+  - delta-spark
   - distlib
   - django
   - docutils
