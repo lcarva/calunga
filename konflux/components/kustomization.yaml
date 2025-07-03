@@ -38,6 +38,7 @@ resources:
   - grpcio-status
   - h11
   - h2
+  - h5py
   - hatch-fancy-pypi-readme
   - hatch-vcs
   - hatchling
