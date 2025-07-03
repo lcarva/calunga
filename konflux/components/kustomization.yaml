@@ -108,5 +108,6 @@ resources:
   - virtualenv
   - wheel
   - widgetsnbextension
+  - wrapt
   - xyzservices
   - zipp
