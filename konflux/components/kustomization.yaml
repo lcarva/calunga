@@ -59,6 +59,7 @@ resources:
   - mdurl
   - meson-python
   - microsoft-kiota-http
+  - mock
   - more-itertools
   - mypy
   - mypy-extensions
