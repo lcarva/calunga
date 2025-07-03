@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: h5py
+  name: h5py
+spec:
+  image:
+    name: calunga-tenant/h5py
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: h5py
+spec:
+  componentName: h5py
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/h5py
