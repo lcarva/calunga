@@ -134,9 +134,9 @@ markupsafe==3.0.2 \
     --hash=sha256:f8b3d067f2e40fe93e1ccdd6b2e1d16c43140e76f02fb1319a05cf2b79d99430 \
     --hash=sha256:fcabf5ff6eea076f859677f5f0b6b5c1a51e70a376b0579e0eadef8db48c6b50
     # via jinja2
-narwhals==1.42.1 \
-    --hash=sha256:50a5635b11aeda98cf9c37e839fd34b0a24159f59a4dfae930290ad698320494 \
-    --hash=sha256:7a270d44b94ccdb277a799ae890c42e8504c537c1849f195eb14717c6184977a
+narwhals==1.45.0 \
+    --hash=sha256:0585612aa7ec89f9d061e78410b6fb8772794389d1a29d5799572d6b81999497 \
+    --hash=sha256:f9ecefb9d09cda6fefa8ead10dc37a79129b6c78b0ac7117d21b4d4486bdd0d1
     # via bokeh
 numpy==2.3.1 \
     --hash=sha256:0025048b3c1557a20bc80d06fdeb8cc7fc193721484cca82b2cfa072fec71a93 \
