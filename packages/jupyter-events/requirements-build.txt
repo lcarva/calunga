@@ -133,9 +133,9 @@ pathspec==0.12.1 \
     --hash=sha256:a0d503e138a4c123b27490a4f7beda6a01c6f288df0e4a8b79c7eb0dc7b4cc08 \
     --hash=sha256:a482d51503a1ab33b1c67a6c3813a26953dbdc71c31dacaef9a838c4e29f5712
     # via hatchling
-pdm-backend==2.4.4 \
-    --hash=sha256:87f85f65c208956a8adbcc01b8878ab29a97d0494cde56b733d961d4b5a48acf \
-    --hash=sha256:f72551eeb319f74ca25856c24fb4026684eeb0dddd9df68482901ab0dc481258
+pdm-backend==2.4.5 \
+    --hash=sha256:56c019c440308adad5d057c08cbb777e65f43b991a3b0920749781258972fe5b \
+    --hash=sha256:7f6c780b529baaf88947e12203af46b3ed45cff719b04c870b186ba9cdc2ddab
     # via webcolors
 pluggy==1.6.0 \
     --hash=sha256:7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3 \
