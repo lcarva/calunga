@@ -106,6 +106,7 @@ resources:
   - soupsieve
   - sqlparse
   - tableauserverclient
+  - thriftpy2
   - tomlkit
   - tox
   - tqdm

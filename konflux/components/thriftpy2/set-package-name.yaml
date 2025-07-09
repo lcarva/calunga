@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: thriftpy2
+  name: thriftpy2
+spec:
+  image:
+    name: calunga-tenant/thriftpy2
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: thriftpy2
+spec:
+  componentName: thriftpy2
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/thriftpy2
