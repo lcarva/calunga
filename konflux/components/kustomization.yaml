@@ -24,6 +24,7 @@ resources:
   - click
   - click-plugins
   - colorama
+  - databricks-sql-connector
   - distlib
   - django
   - docutils

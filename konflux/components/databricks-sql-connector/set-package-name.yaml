@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: databricks-sql-connector
+  name: databricks-sql-connector
+spec:
+  image:
+    name: calunga-tenant/databricks-sql-connector
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: databricks-sql-connector
+spec:
+  componentName: databricks-sql-connector
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/databricks-sql-connector
