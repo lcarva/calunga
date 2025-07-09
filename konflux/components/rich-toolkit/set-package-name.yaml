@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: rich-toolkit
+  name: rich-toolkit
+spec:
+  image:
+    name: calunga-tenant/rich-toolkit
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: rich-toolkit
+spec:
+  componentName: rich-toolkit
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/rich-toolkit

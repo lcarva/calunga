@@ -111,6 +111,7 @@ resources:
   - responses
   - rfc3986-validator
   - rich
+  - rich-toolkit
   - rsa
   - s3fs
   - s3transfer
