@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: matplotlib-inline
+  name: matplotlib-inline
+spec:
+  image:
+    name: calunga-tenant/matplotlib-inline
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: matplotlib-inline
+spec:
+  componentName: matplotlib-inline
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/matplotlib-inline

@@ -59,6 +59,7 @@ resources:
   - markdown-it-py
   - markupsafe
   - marshmallow
+  - matplotlib-inline
   - mdurl
   - meson-python
   - microsoft-kiota-http
