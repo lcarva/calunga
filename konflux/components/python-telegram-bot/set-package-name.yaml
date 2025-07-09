@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: python-telegram-bot
+  name: python-telegram-bot
+spec:
+  image:
+    name: calunga-tenant/python-telegram-bot
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: python-telegram-bot
+spec:
+  componentName: python-telegram-bot
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/python-telegram-bot
