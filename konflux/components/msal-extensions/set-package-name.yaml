@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: msal-extensions
+  name: msal-extensions
+spec:
+  image:
+    name: calunga-tenant/msal-extensions
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: msal-extensions
+spec:
+  componentName: msal-extensions
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/msal-extensions

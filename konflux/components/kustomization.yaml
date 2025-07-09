@@ -64,6 +64,7 @@ resources:
   - microsoft-kiota-http
   - mock
   - more-itertools
+  - msal-extensions
   - mypy
   - mypy-extensions
   - ninja
