@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: pillow
+  name: pillow
+spec:
+  image:
+    name: calunga-tenant/pillow
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: pillow
+spec:
+  componentName: pillow
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/pillow
