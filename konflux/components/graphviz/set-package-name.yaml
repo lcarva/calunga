@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: graphviz
+  name: graphviz
+spec:
+  image:
+    name: calunga-tenant/graphviz
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: graphviz
+spec:
+  componentName: graphviz
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/graphviz

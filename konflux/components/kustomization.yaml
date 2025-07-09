@@ -37,6 +37,7 @@ resources:
   - google-auth
   - google-cloud-vision
   - googleapis-common-protos
+  - graphviz
   - grpcio-status
   - h11
   - h2
