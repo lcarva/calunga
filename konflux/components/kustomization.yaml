@@ -98,6 +98,7 @@ resources:
   - s3transfer
   - scikit-build-core
   - seaborn
+  - sentry-sdk
   - setuptools
   - setuptools-scm
   - six

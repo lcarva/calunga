@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: sentry-sdk
+  name: sentry-sdk
+spec:
+  image:
+    name: calunga-tenant/sentry-sdk
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: sentry-sdk
+spec:
+  componentName: sentry-sdk
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/sentry-sdk
