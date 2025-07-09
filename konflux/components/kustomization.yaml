@@ -82,6 +82,7 @@ resources:
   - mypy-extensions
   - ninja
   - numpy
+  - opentelemetry-exporter-otlp
   - oscrypto
   - packaging
   - pandas
