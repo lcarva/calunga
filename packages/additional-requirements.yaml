@@ -29,6 +29,9 @@ packages:
       - setuptools
   python-dateutil:
     package_name: python-dateutil
+  rfc3339-validator:
+    requirements_in:
+      - setuptools
   six:
     requirements_in:
       - setuptools

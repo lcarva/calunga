@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: rfc3339-validator
+  name: rfc3339-validator
+spec:
+  image:
+    name: calunga-tenant/rfc3339-validator
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: rfc3339-validator
+spec:
+  componentName: rfc3339-validator
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/rfc3339-validator
