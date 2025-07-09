@@ -32,3 +32,6 @@ packages:
   wcwidth:
     requirements_in:
       - setuptools
+  ply:
+    requirements_in:
+      - setuptools

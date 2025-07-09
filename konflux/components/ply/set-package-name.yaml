@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: ply
+  name: ply
+spec:
+  image:
+    name: calunga-tenant/ply
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: ply
+spec:
+  componentName: ply
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/ply
