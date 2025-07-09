@@ -51,6 +51,7 @@ resources:
   - iniconfig
   - isort
   - jinja2
+  - jsonschema
   - jupyter-events
   - keras
   - limits
