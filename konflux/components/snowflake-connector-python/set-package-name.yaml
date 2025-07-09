@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: snowflake-connector-python
+  name: snowflake-connector-python
+spec:
+  image:
+    name: calunga-tenant/snowflake-connector-python
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: snowflake-connector-python
+spec:
+  componentName: snowflake-connector-python
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/snowflake-connector-python

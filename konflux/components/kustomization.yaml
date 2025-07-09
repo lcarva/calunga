@@ -102,6 +102,7 @@ resources:
   - setuptools-scm
   - six
   - sniffio
+  - snowflake-connector-python
   - soupsieve
   - sqlparse
   - tableauserverclient
