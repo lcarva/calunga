@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: xlrd
+  name: xlrd
+spec:
+  image:
+    name: calunga-tenant/xlrd
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: xlrd
+spec:
+  componentName: xlrd
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/xlrd

@@ -151,5 +151,6 @@ resources:
   - wheel
   - widgetsnbextension
   - wrapt
+  - xlrd
   - xyzservices
   - zipp
