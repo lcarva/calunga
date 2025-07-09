@@ -104,6 +104,7 @@ resources:
   - pyproject-metadata
   - pytest
   - python-dateutil
+  - python-telegram-bot
   - pytz
   - pyyaml
   - readme-renderer
