@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: fastapi
+  name: fastapi
+spec:
+  image:
+    name: calunga-tenant/fastapi
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: fastapi
+spec:
+  componentName: fastapi
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/fastapi
