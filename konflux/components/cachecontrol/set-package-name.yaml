@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: cachecontrol
+  name: cachecontrol
+spec:
+  image:
+    name: calunga-tenant/cachecontrol
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: cachecontrol
+spec:
+  componentName: cachecontrol
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/cachecontrol

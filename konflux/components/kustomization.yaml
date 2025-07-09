@@ -18,6 +18,7 @@ resources:
   - bokeh
   - boto3
   - botocore
+  - cachecontrol
   - cachetools
   - calver
   - cffi
