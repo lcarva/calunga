@@ -133,6 +133,7 @@ resources:
   - tableauserverclient
   - tblib
   - thriftpy2
+  - toml
   - tomlkit
   - toolz
   - tornado

@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: toml
+  name: toml
+spec:
+  image:
+    name: calunga-tenant/toml
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: toml
+spec:
+  componentName: toml
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/toml

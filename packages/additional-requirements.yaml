@@ -38,6 +38,9 @@ packages:
   six:
     requirements_in:
       - setuptools
+  toml:
+    requirements_in:
+      - setuptools
   toolz:
     requirements_in:
       - setuptools
