@@ -24,6 +24,9 @@ packages:
   oscrypto:
     requirements_in:
       - setuptools
+  ply:
+    requirements_in:
+      - setuptools
   python-dateutil:
     package_name: python-dateutil
   six:
