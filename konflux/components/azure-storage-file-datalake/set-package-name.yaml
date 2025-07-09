@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: azure-storage-file-datalake
+  name: azure-storage-file-datalake
+spec:
+  image:
+    name: calunga-tenant/azure-storage-file-datalake
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: azure-storage-file-datalake
+spec:
+  componentName: azure-storage-file-datalake
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/azure-storage-file-datalake

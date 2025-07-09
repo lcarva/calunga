@@ -9,6 +9,7 @@ resources:
   - appdirs
   - arrow
   - attrs
+  - azure-storage-file-datalake
   - beautifulsoup4
   - black
   - blinker
