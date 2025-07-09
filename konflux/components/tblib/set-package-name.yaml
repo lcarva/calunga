@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: tblib
+  name: tblib
+spec:
+  image:
+    name: calunga-tenant/tblib
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: tblib
+spec:
+  componentName: tblib
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/tblib
