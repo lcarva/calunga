@@ -84,6 +84,7 @@ resources:
   - pyasn1-modules
   - pydantic
   - pydantic-core
+  - pydantic-settings
   - pygments
   - pyjwt
   - pyproject-api

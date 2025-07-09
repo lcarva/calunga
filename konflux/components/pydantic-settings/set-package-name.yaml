@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: pydantic-settings
+  name: pydantic-settings
+spec:
+  image:
+    name: calunga-tenant/pydantic-settings
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: pydantic-settings
+spec:
+  componentName: pydantic-settings
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/pydantic-settings
