@@ -104,6 +104,7 @@ resources:
   - sniffio
   - soupsieve
   - sqlparse
+  - tableauserverclient
   - tomlkit
   - tox
   - tqdm

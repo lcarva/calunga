@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: tableauserverclient
+  name: tableauserverclient
+spec:
+  image:
+    name: calunga-tenant/tableauserverclient
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: tableauserverclient
+spec:
+  componentName: tableauserverclient
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/tableauserverclient
