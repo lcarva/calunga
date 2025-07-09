@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: retry
+  name: retry
+spec:
+  image:
+    name: calunga-tenant/retry
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: retry
+spec:
+  componentName: retry
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/retry
