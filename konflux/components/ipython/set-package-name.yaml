@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: ipython
+  name: ipython
+spec:
+  image:
+    name: calunga-tenant/ipython
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: ipython
+spec:
+  componentName: ipython
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/ipython
