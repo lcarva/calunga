@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: email-validator
+  name: email-validator
+spec:
+  image:
+    name: calunga-tenant/email-validator
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: email-validator
+spec:
+  componentName: email-validator
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/email-validator

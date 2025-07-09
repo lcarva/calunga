@@ -28,6 +28,7 @@ resources:
   - distlib
   - django
   - docutils
+  - email-validator
   - faker
   - fastavro
   - filelock
