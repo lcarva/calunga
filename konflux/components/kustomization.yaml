@@ -59,6 +59,7 @@ resources:
   - idna
   - importlib-metadata
   - iniconfig
+  - isoduration
   - isort
   - jinja2
   - json5
