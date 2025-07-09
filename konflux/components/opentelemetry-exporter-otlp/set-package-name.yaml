@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: opentelemetry-exporter-otlp
+  name: opentelemetry-exporter-otlp
+spec:
+  image:
+    name: calunga-tenant/opentelemetry-exporter-otlp
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: opentelemetry-exporter-otlp
+spec:
+  componentName: opentelemetry-exporter-otlp
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/opentelemetry-exporter-otlp
