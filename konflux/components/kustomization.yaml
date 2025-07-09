@@ -113,6 +113,7 @@ resources:
   - thriftpy2
   - tomlkit
   - toolz
+  - tornado
   - tox
   - tqdm
   - trove-classifiers

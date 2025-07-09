@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: tornado
+  name: tornado
+spec:
+  image:
+    name: calunga-tenant/tornado
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: tornado
+spec:
+  componentName: tornado
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/tornado
