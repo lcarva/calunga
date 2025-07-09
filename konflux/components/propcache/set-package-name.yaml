@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: propcache
+  name: propcache
+spec:
+  image:
+    name: calunga-tenant/propcache
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: propcache
+spec:
+  componentName: propcache
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/propcache

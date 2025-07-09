@@ -27,6 +27,9 @@ packages:
   ply:
     requirements_in:
       - setuptools
+  propcache:
+    requirements_in:
+      - Cython
   python-dateutil:
     package_name: python-dateutil
   six:
