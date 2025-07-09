@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: pbr
+  name: pbr
+spec:
+  image:
+    name: calunga-tenant/pbr
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: pbr
+spec:
+  componentName: pbr
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/pbr
