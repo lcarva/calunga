@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: backports-tarfile
+  name: backports-tarfile
+spec:
+  image:
+    name: calunga-tenant/backports-tarfile
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: backports-tarfile
+spec:
+  componentName: backports-tarfile
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/backports-tarfile

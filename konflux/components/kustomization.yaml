@@ -12,6 +12,7 @@ resources:
   - async-timeout
   - attrs
   - azure-storage-file-datalake
+  - backports-tarfile
   - beautifulsoup4
   - black
   - blinker
