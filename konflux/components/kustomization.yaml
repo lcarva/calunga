@@ -9,6 +9,7 @@ resources:
   - anyio
   - appdirs
   - arrow
+  - async-timeout
   - attrs
   - beautifulsoup4
   - black

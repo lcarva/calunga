@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: async-timeout
+  name: async-timeout
+spec:
+  image:
+    name: calunga-tenant/async-timeout
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: async-timeout
+spec:
+  componentName: async-timeout
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/async-timeout
