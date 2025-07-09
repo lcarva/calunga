@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: types-requests
+  name: types-requests
+spec:
+  image:
+    name: calunga-tenant/types-requests
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: types-requests
+spec:
+  componentName: types-requests
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/types-requests
