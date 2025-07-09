@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: isoduration
+  name: isoduration
+spec:
+  image:
+    name: calunga-tenant/isoduration
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: isoduration
+spec:
+  componentName: isoduration
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/isoduration
