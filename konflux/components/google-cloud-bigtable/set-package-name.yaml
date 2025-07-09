@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: google-cloud-bigtable
+  name: google-cloud-bigtable
+spec:
+  image:
+    name: calunga-tenant/google-cloud-bigtable
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: google-cloud-bigtable
+spec:
+  componentName: google-cloud-bigtable
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/google-cloud-bigtable
