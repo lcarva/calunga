@@ -89,6 +89,7 @@ resources:
   - patchelf
   - pathspec
   - pbr
+  - pkgutil-resolve-name
   - platformdirs
   - pluggy
   - ply
