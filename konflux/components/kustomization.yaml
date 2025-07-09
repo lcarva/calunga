@@ -130,6 +130,7 @@ resources:
   - snowflake-connector-python
   - soupsieve
   - sqlparse
+  - sshtunnel
   - tableauserverclient
   - tblib
   - thriftpy2

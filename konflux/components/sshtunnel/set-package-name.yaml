@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: sshtunnel
+  name: sshtunnel
+spec:
+  image:
+    name: calunga-tenant/sshtunnel
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: sshtunnel
+spec:
+  componentName: sshtunnel
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/sshtunnel
