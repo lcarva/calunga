@@ -42,6 +42,7 @@ resources:
   - google-api-core
   - google-api-python-client
   - google-auth
+  - google-cloud-bigtable
   - google-cloud-logging
   - google-cloud-vision
   - googleapis-common-protos
