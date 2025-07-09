@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: google-api-python-client
+  name: google-api-python-client
+spec:
+  image:
+    name: calunga-tenant/google-api-python-client
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: google-api-python-client
+spec:
+  componentName: google-api-python-client
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/google-api-python-client

@@ -36,6 +36,7 @@ resources:
   - freezegun
   - fsspec
   - google-api-core
+  - google-api-python-client
   - google-auth
   - google-cloud-vision
   - googleapis-common-protos
