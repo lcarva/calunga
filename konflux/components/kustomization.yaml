@@ -30,6 +30,7 @@ resources:
   - faker
   - fastavro
   - filelock
+  - findpython
   - flatbuffers
   - freezegun
   - fsspec

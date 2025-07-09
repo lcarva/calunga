@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: findpython
+  name: findpython
+spec:
+  image:
+    name: calunga-tenant/findpython
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: findpython
+spec:
+  componentName: findpython
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/findpython
