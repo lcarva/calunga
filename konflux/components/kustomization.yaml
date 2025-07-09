@@ -97,6 +97,7 @@ resources:
   - ply
   - prompt-toolkit
   - propcache
+  - py
   - pyasn1
   - pyasn1-modules
   - pydantic
