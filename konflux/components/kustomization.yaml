@@ -28,6 +28,7 @@ resources:
   - cloudpickle
   - colorama
   - databricks-sql-connector
+  - dataclasses-json
   - distlib
   - django
   - docutils
