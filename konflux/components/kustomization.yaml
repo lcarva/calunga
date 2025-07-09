@@ -33,6 +33,7 @@ resources:
   - docutils
   - email-validator
   - faker
+  - fastapi
   - fastavro
   - filelock
   - findpython
