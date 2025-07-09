@@ -148,6 +148,7 @@ resources:
   - urllib3
   - virtualenv
   - wcwidth
+  - webcolors
   - wheel
   - widgetsnbextension
   - wrapt

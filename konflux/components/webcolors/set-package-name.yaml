@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: webcolors
+  name: webcolors
+spec:
+  image:
+    name: calunga-tenant/webcolors
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: webcolors
+spec:
+  componentName: webcolors
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/webcolors
