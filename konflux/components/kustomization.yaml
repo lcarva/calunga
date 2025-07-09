@@ -43,6 +43,7 @@ resources:
   - google-api-core
   - google-api-python-client
   - google-auth
+  - google-cloud-bigquery
   - google-cloud-bigtable
   - google-cloud-logging
   - google-cloud-vision
