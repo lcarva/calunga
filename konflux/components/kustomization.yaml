@@ -95,6 +95,7 @@ resources:
   - pyyaml
   - readme-renderer
   - requests
+  - responses
   - rfc3986-validator
   - rich
   - rsa
