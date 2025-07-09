@@ -135,6 +135,7 @@ resources:
   - trove-classifiers
   - types-psutil
   - types-python-dateutil
+  - types-requests
   - types-setuptools
   - typing-extensions
   - tzdata
