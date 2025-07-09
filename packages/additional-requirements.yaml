@@ -24,6 +24,9 @@ packages:
   oscrypto:
     requirements_in:
       - setuptools
+  pkgutil-resolve-name:
+    requirements_in:
+      - setuptools
   ply:
     requirements_in:
       - setuptools

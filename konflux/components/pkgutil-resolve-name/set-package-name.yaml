@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: pkgutil-resolve-name
+  name: pkgutil-resolve-name
+spec:
+  image:
+    name: calunga-tenant/pkgutil-resolve-name
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: pkgutil-resolve-name
+spec:
+  componentName: pkgutil-resolve-name
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/pkgutil-resolve-name
