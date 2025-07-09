@@ -45,6 +45,7 @@ resources:
   - google-auth
   - google-cloud-bigtable
   - google-cloud-logging
+  - google-cloud-resource-manager
   - google-cloud-vision
   - googleapis-common-protos
   - graphviz

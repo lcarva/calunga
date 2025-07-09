@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: google-cloud-resource-manager
+  name: google-cloud-resource-manager
+spec:
+  image:
+    name: calunga-tenant/google-cloud-resource-manager
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: google-cloud-resource-manager
+spec:
+  componentName: google-cloud-resource-manager
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/google-cloud-resource-manager
