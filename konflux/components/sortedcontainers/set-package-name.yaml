@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: sortedcontainers
+  name: sortedcontainers
+spec:
+  image:
+    name: calunga-tenant/sortedcontainers
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: sortedcontainers
+spec:
+  componentName: sortedcontainers
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/sortedcontainers

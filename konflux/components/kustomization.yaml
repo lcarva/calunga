@@ -130,6 +130,7 @@ resources:
   - six
   - sniffio
   - snowflake-connector-python
+  - sortedcontainers
   - soupsieve
   - sqlparse
   - tableauserverclient
