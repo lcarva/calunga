@@ -13,6 +13,9 @@ packages:
   flatbuffers:
     requirements_in:
       - setuptools
+  grpcio-health-checking:
+    requirements_in:
+      - setuptools
   h11:
     requirements_in:
       - setuptools

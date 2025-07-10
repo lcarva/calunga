@@ -49,6 +49,7 @@ resources:
   - google-cloud-vision
   - googleapis-common-protos
   - graphviz
+  - grpcio-health-checking
   - grpcio-status
   - h11
   - h2

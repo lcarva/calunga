@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: grpcio-health-checking
+  name: grpcio-health-checking
+spec:
+  image:
+    name: calunga-tenant/grpcio-health-checking
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: grpcio-health-checking
+spec:
+  componentName: grpcio-health-checking
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/grpcio-health-checking
