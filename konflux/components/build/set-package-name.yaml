@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: build
+  name: build
+spec:
+  image:
+    name: calunga-tenant/build
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: build
+spec:
+  componentName: build
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/build

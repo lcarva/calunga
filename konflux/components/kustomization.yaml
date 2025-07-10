@@ -19,6 +19,7 @@ resources:
   - bokeh
   - boto3
   - botocore
+  - build
   - cachetools
   - calver
   - cffi
