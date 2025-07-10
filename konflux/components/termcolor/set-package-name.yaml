@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: termcolor
+  name: termcolor
+spec:
+  image:
+    name: calunga-tenant/termcolor
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: termcolor
+spec:
+  componentName: termcolor
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/termcolor
