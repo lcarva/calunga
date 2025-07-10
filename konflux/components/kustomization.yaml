@@ -98,6 +98,7 @@ resources:
   - propcache
   - pyasn1
   - pyasn1-modules
+  - pycryptodomex
   - pydantic
   - pydantic-settings
   - pygments
