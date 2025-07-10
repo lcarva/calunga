@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: deepdiff
+  name: deepdiff
+spec:
+  image:
+    name: calunga-tenant/deepdiff
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: deepdiff
+spec:
+  componentName: deepdiff
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/deepdiff

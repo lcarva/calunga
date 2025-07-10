@@ -29,6 +29,7 @@ resources:
   - cloudpickle
   - colorama
   - databricks-sql-connector
+  - deepdiff
   - distlib
   - django
   - docutils
