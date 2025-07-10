@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: awscli
+  name: awscli
+spec:
+  image:
+    name: calunga-tenant/awscli
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: awscli
+spec:
+  componentName: awscli
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/awscli

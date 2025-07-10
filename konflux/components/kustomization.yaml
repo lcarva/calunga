@@ -11,6 +11,7 @@ resources:
   - arrow
   - async-timeout
   - attrs
+  - awscli
   - azure-storage-file-datalake
   - beautifulsoup4
   - black
