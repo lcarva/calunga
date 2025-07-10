@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: weaviate-client
+  name: weaviate-client
+spec:
+  image:
+    name: calunga-tenant/weaviate-client
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: weaviate-client
+spec:
+  componentName: weaviate-client
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/weaviate-client

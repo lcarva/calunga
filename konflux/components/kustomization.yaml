@@ -152,6 +152,7 @@ resources:
   - urllib3
   - virtualenv
   - wcwidth
+  - weaviate-client
   - wheel
   - widgetsnbextension
   - wrapt
