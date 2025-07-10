@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: google-cloud-bigquery-storage
+  name: google-cloud-bigquery-storage
+spec:
+  image:
+    name: calunga-tenant/google-cloud-bigquery-storage
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: google-cloud-bigquery-storage
+spec:
+  componentName: google-cloud-bigquery-storage
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/google-cloud-bigquery-storage
