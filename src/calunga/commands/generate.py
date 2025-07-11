@@ -39,7 +39,8 @@ def find_packages(packages_dir: Path) -> List[Path]:
 def generate_package_wrapper(
     name: str,
     path: Path,
-    additional_requirements: Dict[str, Any]
+    additional_requirements: Dict[str, Any],
+    base_path: Path
 ) -> None:
     """Generate package wrapper files."""
     console.print(f"  [blue]Generating package wrapper for {name}[/blue]")
@@ -77,10 +78,10 @@ version = "0.0.1"
                 "pip-compile",
                 "--allow-unsafe",
                 "--generate-hashes",
-                str(requirements_in_path),
+                str(requirements_in_path.relative_to(base_path)),
                 "--output-file",
-                str(requirements_txt_path)
-            ], check=True, capture_output=True)
+                str(requirements_txt_path.relative_to(base_path))
+            ], check=True, capture_output=True, cwd=base_path)
         except (subprocess.CalledProcessError, FileNotFoundError) as e:
             console.print(f"    [yellow]Warning: Could not generate requirements.txt for {name}: {e}[/yellow]")
 
@@ -93,10 +94,10 @@ version = "0.0.1"
                 "pybuild-deps",
                 "compile",
                 "--generate-hashes",
-                str(requirements_txt_path),
+                str(requirements_txt_path.relative_to(base_path)),
                 "--output-file",
-                str(requirements_build_path)
-            ], check=True, capture_output=True)
+                str(requirements_build_path.relative_to(base_path))
+            ], check=True, capture_output=True, cwd=base_path)
         except (subprocess.CalledProcessError, FileNotFoundError) as e:
             console.print(f"    [yellow]Warning: Could not generate requirements-build.txt for {name}: {e}[/yellow]")
 
@@ -277,7 +278,7 @@ def generate(
             console.print(f"[green]Processing {name}[/green]")
 
             if not skip_wrapper:
-                generate_package_wrapper(name, package_path, additional_requirements)
+                generate_package_wrapper(name, package_path, additional_requirements, base_path)
             else:
                 console.print("  [dim]Skipping package wrapper generation[/dim]")
 
