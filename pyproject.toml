@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "calunga"
+version = "0.0.1"
+description = "CLI for managing Calunga - a library of Python packages built from source"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "calunga", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+typer = "^0.12.0"
+rich = "^13.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+pytest-cov = "^4.0.0"
+black = "^23.0.0"
+isort = "^5.0.0"
+flake8 = "^6.0.0"
+mypy = "^1.0.0"
+
+[tool.poetry.scripts]
+calunga = "calunga.cli:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--cov=calunga --cov-report=term-missing --cov-report=html"
