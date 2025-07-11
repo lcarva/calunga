@@ -1,0 +1,54 @@
+# Cursor Rules for Calunga CLI Project
+
+## Project Overview
+This project is converting bash scripts to a modern Python CLI for better testability and maintainability. The CLI manages Calunga - a library of Python packages built from source in Konflux.
+
+## Technology Stack
+- **Python**: 3.12+ (modern Python with latest features and performance)
+- **CLI Framework**: Typer (type-safe, modern, built on Click)
+- **Package Management**: Poetry (modern Python dependency management)
+- **Testing**: pytest with coverage
+- **UI**: Rich (for beautiful terminal output)
+- **Code Quality**: black, isort, flake8, mypy
+
+## Development Preferences
+
+### Code Style
+- Use black for code formatting (line length: 88)
+- Use isort for import sorting (black compatible profile)
+- Follow PEP 8 and type hints for all functions
+- Use meaningful docstrings for all public functions
+
+### CLI Development
+- Use Typer for all CLI commands
+- Use Rich for all user-facing output (panels, console, etc.)
+- Always add comprehensive help text for commands
+- Structure commands as proper subcommands, not main commands
+- Use `no_args_is_help=True` for the main app
+
+### Testing
+- Maintain 100% test coverage for all new code
+- Use pytest for all tests
+- Use Typer's CliRunner for testing CLI commands
+- Test both success and failure scenarios
+- Include tests for help text and command registration
+
+### Project Structure
+- Source code in `src/calunga/`
+- Tests in `tests/`
+- Use Poetry for dependency management
+- Version information in `src/calunga/__init__.py`
+
+### Git Workflow
+- Focus commit messages on "why" not "what"
+- Use descriptive commit messages with context
+- Run tests before committing
+- Keep commits atomic and focused
+
+### When Converting Bash Scripts
+1. Analyze the bash script functionality first
+2. Create equivalent Python functions with proper error handling
+3. Add comprehensive tests
+4. Maintain backwards compatibility where possible
+5. Use Rich for improved user feedback
+6. Add proper command-line argument validation
