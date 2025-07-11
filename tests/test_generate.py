@@ -1,5 +1,6 @@
 """Tests for the generate command."""
 
+import subprocess
 import tempfile
 import yaml
 from pathlib import Path
@@ -17,6 +18,7 @@ from calunga.commands.generate import (
     generate_konflux_resources,
     generate_pac_resources,
     update_all_kustomization,
+    compile_requirements,
 )
 
 
@@ -156,9 +158,11 @@ def test_generate_package_wrapper(temp_workspace):
     pkg_path = temp_workspace / "packages" / "test-pkg-1"
 
     # Mock subprocess calls
-    with patch('subprocess.run') as mock_run:
-        mock_run.return_value = MagicMock()
-        generate_package_wrapper("test-pkg-1", pkg_path, additional_requirements)
+    with patch('calunga.commands.generate.compile_requirements') as mock_compile:
+        mock_compile.return_value = None
+        with patch('subprocess.run') as mock_run:
+            mock_run.return_value = MagicMock()
+            generate_package_wrapper("test-pkg-1", pkg_path, additional_requirements, temp_workspace)
 
     # Check that files were created
     assert (pkg_path / "pyproject.toml").exists()
@@ -191,12 +195,198 @@ def test_generate_package_wrapper_skip_existing(temp_workspace):
     with open(pkg_path / "pyproject.toml") as f:
         original_content = f.read()
 
-    generate_package_wrapper("existing-pkg", pkg_path, additional_requirements)
+    # Mock compile_requirements and subprocess calls
+    with patch('calunga.commands.generate.compile_requirements') as mock_compile:
+        mock_compile.return_value = None
+        with patch('subprocess.run') as mock_run:
+            mock_run.return_value = MagicMock()
+            generate_package_wrapper("existing-pkg", pkg_path, additional_requirements, temp_workspace)
 
     # Check that existing file was not overwritten
     with open(pkg_path / "pyproject.toml") as f:
         current_content = f.read()
         assert current_content == original_content
+
+
+def test_compile_requirements_programmatically_success(temp_workspace):
+    """Test successful compilation of requirements using pip-tools."""
+    # Create test files
+    pkg_path = temp_workspace / "packages" / "test-pkg"
+    pkg_path.mkdir()
+
+    requirements_in = pkg_path / "requirements.in"
+    requirements_txt = pkg_path / "requirements.txt"
+
+    # Create requirements.in
+    with open(requirements_in, "w") as f:
+        f.write("requests\nclick\n")
+
+    # Mock subprocess.run
+    with patch('subprocess.run') as mock_run:
+        mock_run.return_value = MagicMock()
+
+        compile_requirements(
+            requirements_in,
+            requirements_txt,
+            temp_workspace,
+            allow_unsafe=True,
+            generate_hashes=True
+        )
+
+        mock_run.assert_called_once()
+        # Check that the correct arguments were passed
+        call_args = mock_run.call_args[0][0]
+        assert "piptools" in call_args[2]
+        assert "compile" in call_args[3]
+        assert "--allow-unsafe" in call_args
+        assert "--generate-hashes" in call_args
+
+
+def test_compile_requirements_programmatically_with_options(temp_workspace):
+    """Test compilation with different options."""
+    pkg_path = temp_workspace / "packages" / "test-pkg"
+    pkg_path.mkdir()
+
+    requirements_in = pkg_path / "requirements.in"
+    requirements_txt = pkg_path / "requirements.txt"
+
+    with open(requirements_in, "w") as f:
+        f.write("requests\n")
+
+    # Mock subprocess.run
+    with patch('subprocess.run') as mock_run:
+        mock_run.return_value = MagicMock()
+
+        # Test with different options
+        compile_requirements(
+            requirements_in,
+            requirements_txt,
+            temp_workspace,
+            allow_unsafe=False,
+            generate_hashes=False
+        )
+
+        mock_run.assert_called_once()
+        # Check that the correct arguments were passed
+        call_args = mock_run.call_args[0][0]
+        assert "piptools" in call_args[2]
+        assert "compile" in call_args[3]
+        # When False, these options should not be included
+        assert "--allow-unsafe" not in call_args
+        assert "--generate-hashes" not in call_args
+
+
+def test_compile_requirements_programmatically_exception(temp_workspace):
+    """Test handling of exceptions during compilation."""
+    pkg_path = temp_workspace / "packages" / "test-pkg"
+    pkg_path.mkdir()
+
+    requirements_in = pkg_path / "requirements.in"
+    requirements_txt = pkg_path / "requirements.txt"
+
+    with open(requirements_in, "w") as f:
+        f.write("invalid-package-name-that-does-not-exist\n")
+
+    # Mock subprocess.run to raise CalledProcessError
+    with patch('subprocess.run') as mock_run:
+        mock_run.side_effect = subprocess.CalledProcessError(1, "pip-compile", "Error: Package not found")
+
+        with pytest.raises(subprocess.CalledProcessError):
+            compile_requirements(
+                requirements_in,
+                requirements_txt,
+                temp_workspace,
+                allow_unsafe=True,
+                generate_hashes=True
+            )
+
+
+def test_compile_requirements_programmatically_runtime_exception(temp_workspace):
+    """Test handling of runtime exceptions during compilation."""
+    pkg_path = temp_workspace / "packages" / "test-pkg"
+    pkg_path.mkdir()
+
+    requirements_in = pkg_path / "requirements.in"
+    requirements_txt = pkg_path / "requirements.txt"
+
+    with open(requirements_in, "w") as f:
+        f.write("requests\n")
+
+    # Mock subprocess.run to raise a general exception
+    with patch('subprocess.run') as mock_run:
+        mock_run.side_effect = Exception("Runtime error")
+
+        with pytest.raises(Exception):
+            compile_requirements(
+                requirements_in,
+                requirements_txt,
+                temp_workspace,
+                allow_unsafe=True,
+                generate_hashes=True
+            )
+
+
+def test_compile_requirements_programmatically_directory_change(temp_workspace):
+    """Test that directory changes are handled correctly."""
+    import os
+
+    pkg_path = temp_workspace / "packages" / "test-pkg"
+    pkg_path.mkdir()
+
+    requirements_in = pkg_path / "requirements.in"
+    requirements_txt = pkg_path / "requirements.txt"
+
+    with open(requirements_in, "w") as f:
+        f.write("requests\n")
+
+    original_cwd = os.getcwd()
+
+    # Mock subprocess.run
+    with patch('subprocess.run') as mock_run:
+        mock_run.return_value = MagicMock()
+
+        compile_requirements(
+            requirements_in,
+            requirements_txt,
+            temp_workspace,
+            allow_unsafe=True,
+            generate_hashes=True
+        )
+
+        mock_run.assert_called_once()
+        # Check that subprocess.run was called with the correct keyword arguments
+        call_kwargs = mock_run.call_args[1]
+        assert call_kwargs.get('check') is True
+        assert call_kwargs.get('capture_output') is True
+        assert call_kwargs.get('text') is True
+
+    # Ensure we're back to the original directory
+    assert os.getcwd() == original_cwd
+
+
+def test_generate_package_wrapper_with_programmatic_compilation(temp_workspace):
+    """Test that generate_package_wrapper uses compilation."""
+    additional_requirements = load_additional_requirements(temp_workspace)
+    pkg_path = temp_workspace / "packages" / "test-pkg-1"
+
+    # Mock the compilation
+    with patch('calunga.commands.generate.compile_requirements') as mock_compile:
+        mock_compile.return_value = None
+
+        # Mock subprocess for requirements-build.txt generation
+        with patch('subprocess.run') as mock_run:
+            mock_run.return_value = MagicMock()
+
+            generate_package_wrapper("test-pkg-1", pkg_path, additional_requirements, temp_workspace)
+
+            # Check that compilation was called
+            mock_compile.assert_called_once()
+            call_args = mock_compile.call_args
+            assert call_args[0][0] == pkg_path / "requirements.in"  # requirements_in_path
+            assert call_args[0][1] == pkg_path / "requirements.txt"  # requirements_txt_path
+            assert call_args[0][2] == temp_workspace  # base_path
+            assert call_args[1]['allow_unsafe'] is True
+            assert call_args[1]['generate_hashes'] is True
 
 
 def test_generate_konflux_resources(temp_workspace):

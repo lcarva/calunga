@@ -2,6 +2,7 @@
 
 import os
 import subprocess
+import sys
 from pathlib import Path
 from typing import List, Optional, Dict, Any
 
@@ -10,6 +11,7 @@ import yaml
 from rich.console import Console
 from rich.panel import Panel
 from rich.progress import Progress, TaskID
+
 
 console = Console()
 
@@ -34,6 +36,36 @@ def find_packages(packages_dir: Path) -> List[Path]:
             packages.append(item)
 
     return sorted(packages)
+
+
+def compile_requirements(
+    requirements_in_path: Path,
+    requirements_txt_path: Path,
+    base_path: Path,
+    allow_unsafe: bool = True,
+    generate_hashes: bool = True
+):
+    """Compile requirements using pip-tools."""
+    # Ideally, this would be done as a python module call, but it doesn't seem possible. At least
+    # the same python environment is used. This should work if all the dependencies are installed.
+    command = [
+        sys.executable,
+        "-m",
+        "piptools",
+        "compile",
+        str(requirements_in_path.relative_to(base_path)),
+        "--output-file",
+        str(requirements_txt_path.relative_to(base_path)),
+        "--allow-unsafe" if allow_unsafe else "--no-allow-unsafe",
+        "--generate-hashes" if generate_hashes else "--no-generate-hashes"
+    ]
+
+    subprocess.run(
+        command,
+        check=True,
+        capture_output=True,
+        text=True
+    )
 
 
 def generate_package_wrapper(
@@ -69,21 +101,17 @@ version = "0.0.1"
         with open(requirements_in_path, "w") as f:
             f.write("\n".join(requirements_in_content) + "\n")
 
-    # Generate requirements.txt
+    # Generate requirements.txt using pip-tools programmatically
     requirements_txt_path = path / "requirements.txt"
     if not requirements_txt_path.exists():
         console.print(f"    Creating requirements.txt file for {name}")
-        try:
-            subprocess.run([
-                "pip-compile",
-                "--allow-unsafe",
-                "--generate-hashes",
-                str(requirements_in_path.relative_to(base_path)),
-                "--output-file",
-                str(requirements_txt_path.relative_to(base_path))
-            ], check=True, capture_output=True, cwd=base_path)
-        except (subprocess.CalledProcessError, FileNotFoundError) as e:
-            console.print(f"    [yellow]Warning: Could not generate requirements.txt for {name}: {e}[/yellow]")
+        compile_requirements(
+            requirements_in_path,
+            requirements_txt_path,
+            base_path,
+            allow_unsafe=True,
+            generate_hashes=True
+        )
 
     # Generate requirements-build.txt
     requirements_build_path = path / "requirements-build.txt"
