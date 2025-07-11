@@ -10,6 +10,7 @@ packages = [{include = "calunga", from = "src"}]
 python = "^3.12"
 typer = "^0.12.0"
 rich = "^13.0.0"
+pyyaml = "^6.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.0.0"

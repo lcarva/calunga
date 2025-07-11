@@ -5,6 +5,7 @@ from rich.console import Console
 from rich.panel import Panel
 
 from calunga import __version__
+from calunga.commands.generate import generate
 
 console = Console()
 
@@ -14,6 +15,9 @@ app = typer.Typer(
     add_completion=False,
     no_args_is_help=True,
 )
+
+# Add subcommands
+app.command(name="generate")(generate)
 
 
 @app.callback(invoke_without_command=False)

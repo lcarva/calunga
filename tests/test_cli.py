@@ -35,6 +35,7 @@ def test_help_command():
     assert "Usage: calunga [OPTIONS] COMMAND [ARGS]..." in result.stdout
     assert "CLI for managing Calunga" in result.stdout
     assert "version" in result.stdout
+    assert "generate" in result.stdout
 
 
 def test_invalid_command():
