@@ -8,9 +8,9 @@ calver==2025.4.17 \
     --hash=sha256:460702737d620f5c3d4175450485180a1b7f7a422c5db0e6af3e655c7395ec7e \
     --hash=sha256:82f0efe7f71c28167af5ed9712e0d9d6272eb0817acbbf852b8b2404666a0cf2
     # via trove-classifiers
-expandvars==1.0.0 \
-    --hash=sha256:f04070b8260264185f81142cd85e5df9ceef7229e836c5844302c4ccfa00c30d \
-    --hash=sha256:ff1690eceb90bbdeefd1e4b15f4d217f22a3e66f776c2cb060635d2dde4a7689
+expandvars==1.1.1 \
+    --hash=sha256:09ca39e6bfcb0d899db8778a00dd3d89cfeb0080795c54f16f6279afd0ef8c5b \
+    --hash=sha256:98add8268b760dfee457bde1c17bf745795fdebc22b7ddab75fd3278653f1e05
     # via
     #   frozenlist
     #   propcache
