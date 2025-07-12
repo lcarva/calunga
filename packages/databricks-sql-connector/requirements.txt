@@ -282,8 +282,8 @@ six==1.17.0 \
     # via
     #   python-dateutil
     #   thrift
-thrift==0.20.0 \
-    --hash=sha256:4dd662eadf6b8aebe8a41729527bd69adf6ceaa2a8681cbef64d1273b3e8feba
+thrift==0.22.0 \
+    --hash=sha256:42e8276afbd5f54fe1d364858b6877bc5e5a4a5ed69f6a005b94ca4918fe1466
     # via databricks-sql-connector
 tzdata==2025.2 \
     --hash=sha256:1a403fada01ff9221ca8044d701868fa132215d84beb92242d9acd2147f667a8 \
