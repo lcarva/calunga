@@ -159,9 +159,9 @@ hatchling==1.27.0 \
     # via
     #   hatch-vcs
     #   urllib3
-meson-python==0.13.1 \
-    --hash=sha256:63b3170001425c42fa4cfedadb9051cbd28925ff8eed7c40d36ba0099e3c7618 \
-    --hash=sha256:e33ea3efbadecc15768c205d03b905c7b3bf72afae1e1ebd84b438c4a3ed3393
+meson-python==0.18.0 \
+    --hash=sha256:3b0fe051551cc238f5febb873247c0949cd60ded556efa130aa57021804868e2 \
+    --hash=sha256:c56a99ec9df669a40662fe46960321af6e4b14106c14db228709c1628e23848d
     # via pandas
 meson-python==0.18.0 \
     --hash=sha256:3b0fe051551cc238f5febb873247c0949cd60ded556efa130aa57021804868e2 \
