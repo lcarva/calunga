@@ -4,9 +4,9 @@
 #
 #    pip-compile --generate-hashes --output-file=./packages/django/requirements.txt ./packages/django/requirements.in
 #
-asgiref==3.8.1 \
-    --hash=sha256:3e1e3ecc849832fe52ccf2cb6686b7a55f82bb1d6aee72a58826471390335e47 \
-    --hash=sha256:c343bd80a0bec947a9860adb4c432ffa7db769836c64238fc34bdc3fec84d590
+asgiref==3.9.1 \
+    --hash=sha256:a5ab6582236218e5ef1648f242fd9f10626cfd4de8dc377db215d5d5098e3142 \
+    --hash=sha256:f3bba7092a48005b5f5bacd747d36ee4a5a61f4a269a6df590b43144355ebd2c
     # via django
 Django==5.2.3 \
     --hash=sha256:335213277666ab2c5cac44a792a6d2f3d58eb79a80c14b6b160cd4afc3b75684 \
