@@ -8,7 +8,7 @@ deepdiff==8.5.0 \
     --hash=sha256:a4dd3529fa8d4cd5b9cbb6e3ea9c95997eaa919ba37dac3966c1b8f872dc1cd1 \
     --hash=sha256:d4599db637f36a1c285f5fdfc2cd8d38bde8d8be8636b65ab5e425b67c54df26
     # via -r ./packages/deepdiff/requirements.in
-orderly-set==5.4.1 \
-    --hash=sha256:a1fb5a4fdc5e234e9e8d8e5c1bbdbc4540f4dfe50d12bf17c8bc5dbf1c9c878d \
-    --hash=sha256:b5e21d21680bd9ef456885db800c5cb4f76a03879880c0175e1b077fb166fd83
+orderly-set==5.5.0 \
+    --hash=sha256:46f0b801948e98f427b412fcabb831677194c05c3b699b80de260374baa0b1e7 \
+    --hash=sha256:e87185c8e4d8afa64e7f8160ee2c542a475b738bc891dc3f58102e654125e6ce
     # via deepdiff
