@@ -68,6 +68,7 @@ resources:
   - findpython
   - flake8
   - flatbuffers
+  - fqdn
   - freezegun
   - frozenlist
   - fsspec

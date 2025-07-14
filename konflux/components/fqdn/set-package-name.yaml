@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: fqdn
+  name: fqdn
+spec:
+  image:
+    name: calunga-tenant/fqdn
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: fqdn
+spec:
+  componentName: fqdn
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/fqdn
