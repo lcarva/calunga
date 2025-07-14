@@ -18,18 +18,15 @@ review and merge the changes as needed.
 
 Sometimes, it is easier to debug issues locally. To add a package without using the automated
 workflow described above, create a directory under the [packages](./packages) directory matching the
-package name (always lower case) in [pypi.org](https://pypi.org/), then run the
-[generate.sh](./generate.sh) script.
+package name (always lower case) in [pypi.org](https://pypi.org/), then use the Calunga CLI to
+generate the requirements file for that package.
 
-This will create the requirements file for that package.
+## Development Setup
 
-You'll need `pip-compile` installed which is part of the
-[pip-tools](https://pypi.org/project/pip-tools/) package.
+First, install [Poetry](https://python-poetry.org/docs/#installation) if you haven't already, then install the project dependencies with `poetry install`.
 
-[pybuild-deps](https://pypi.org/project/pybuild-deps/) is also required. Until issue
-[pybuild-deps#304](https://github.com/hermetoproject/pybuild-deps/issues/304) is resolved, install
-it from the fork:
+Now you can generate requirements for a package:
 
 ```bash
-pip install -e git+https://github.com/lcarva/pybuild-deps.git@handle-no-resolver#egg=pybuild_deps
+poetry run calunga generate
 ```
