@@ -33,7 +33,7 @@ echo "==================================================="
 
 echo "Building package locally"
 while true; do
-    ./generate.sh
+    poetry run calunga generate
 
     set +e
     error_output=$(./build-locally.sh "${PKG_NAME}" 2> >(tee /dev/stderr))

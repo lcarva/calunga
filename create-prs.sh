@@ -43,7 +43,7 @@ function update_package() {
 
     rm -f "${requirements_txt}" "${requirements_build_txt}"
 
-    ./generate.sh
+    poetry run calunga generate
 
     new_version="$(grep -ioP '^'${name}'==\K.+\w' "${requirements_txt}")"
 

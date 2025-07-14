@@ -94,6 +94,25 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Upgrade pip
+        run: |
+          pip install --constraint="$(pwd)/.github/workflows/constraints.txt" pip
+          pip --version
+
+      - name: Upgrade pip in virtual environments
+        shell: python
+        run: |
+          import os
+          import pip
+
+          with open(os.environ["GITHUB_ENV"], mode="a") as io:
+              print(f"VIRTUALENV_PIP={pip.__version__}", file=io)
+
+      - name: Install Poetry
+        run: |
+          pipx install --pip-args=--constraint="$(pwd)/.github/workflows/constraints.txt" poetry
+          poetry --version
+
       - name: Extract package name from issue
         id: extract
         run: |
@@ -124,7 +143,7 @@ jobs:
           which pip-compile
 
           mkdir "packages/${{ steps.extract.outputs.package_name }}"
-          ./generate.sh
+          poetry run calunga generate
 
       - name: Apply Konflux resources
         run: |
@@ -161,6 +180,25 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Upgrade pip
+        run: |
+          pip install --constraint="$(pwd)/.github/workflows/constraints.txt" pip
+          pip --version
+
+      - name: Upgrade pip in virtual environments
+        shell: python
+        run: |
+          import os
+          import pip
+
+          with open(os.environ["GITHUB_ENV"], mode="a") as io:
+              print(f"VIRTUALENV_PIP={pip.__version__}", file=io)
+
+      - name: Install Poetry
+        run: |
+          pipx install --pip-args=--constraint="$(pwd)/.github/workflows/constraints.txt" poetry
+          poetry --version
+
       - name: Extract package name from issue
         id: extract
         run: |
@@ -191,7 +229,7 @@ jobs:
           which pip-compile
 
           mkdir "packages/${{ steps.extract.outputs.package_name }}"
-          ./generate.sh
+          poetry run calunga generate
 
       - name: Apply Konflux resources
         run: |
