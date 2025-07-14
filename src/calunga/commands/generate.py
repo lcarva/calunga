@@ -68,6 +68,24 @@ def compile_requirements(
     )
 
 
+def compile_build_requirements(
+    requirements_txt_path: Path,
+    requirements_build_path: Path,
+    base_path: Path
+) -> None:
+    """Compile build requirements using pybuild-deps."""
+    subprocess.run([
+        sys.executable,
+        "-m",
+        "pybuild_deps",
+        "compile",
+        "--generate-hashes",
+        str(requirements_txt_path.relative_to(base_path)),
+        "--output-file",
+        str(requirements_build_path.relative_to(base_path))
+    ], check=True, capture_output=True, cwd=base_path)
+
+
 def generate_package_wrapper(
     name: str,
     path: Path,
@@ -117,17 +135,11 @@ version = "0.0.1"
     requirements_build_path = path / "requirements-build.txt"
     if not requirements_build_path.exists():
         console.print(f"    Creating requirements-build.txt for {name}")
-        try:
-            subprocess.run([
-                "pybuild-deps",
-                "compile",
-                "--generate-hashes",
-                str(requirements_txt_path.relative_to(base_path)),
-                "--output-file",
-                str(requirements_build_path.relative_to(base_path))
-            ], check=True, capture_output=True, cwd=base_path)
-        except (subprocess.CalledProcessError, FileNotFoundError) as e:
-            console.print(f"    [yellow]Warning: Could not generate requirements-build.txt for {name}: {e}[/yellow]")
+        compile_build_requirements(
+            requirements_txt_path,
+            requirements_build_path,
+            base_path
+        )
 
     # Generate argfile.conf
     argfile_path = path / "argfile.conf"

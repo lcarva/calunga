@@ -19,6 +19,7 @@ from calunga.commands.generate import (
     generate_pac_resources,
     update_all_kustomization,
     compile_requirements,
+    compile_build_requirements,
 )
 
 
@@ -364,29 +365,153 @@ def test_compile_requirements_programmatically_directory_change(temp_workspace):
     assert os.getcwd() == original_cwd
 
 
+def test_compile_build_requirements_success(temp_workspace):
+    """Test successful compilation of build requirements using pybuild-deps."""
+    # Create test files
+    pkg_path = temp_workspace / "packages" / "test-pkg"
+    pkg_path.mkdir()
+
+    requirements_txt = pkg_path / "requirements.txt"
+    requirements_build_txt = pkg_path / "requirements-build.txt"
+
+    # Create requirements.txt
+    with open(requirements_txt, "w") as f:
+        f.write("requests==2.28.0\nclick==8.0.0\n")
+
+    # Mock subprocess.run
+    with patch('subprocess.run') as mock_run:
+        mock_run.return_value = MagicMock()
+
+        compile_build_requirements(
+            requirements_txt,
+            requirements_build_txt,
+            temp_workspace
+        )
+
+        mock_run.assert_called_once()
+        # Check that the correct arguments were passed
+        call_args = mock_run.call_args[0][0]
+        assert "pybuild_deps" in call_args[2]
+        assert "compile" in call_args[3]
+        assert "--generate-hashes" in call_args
+
+        # Check that subprocess.run was called with the correct keyword arguments
+        call_kwargs = mock_run.call_args[1]
+        assert call_kwargs.get('check') is True
+        assert call_kwargs.get('capture_output') is True
+        assert call_kwargs.get('cwd') == temp_workspace
+
+
+def test_compile_build_requirements_subprocess_error(temp_workspace):
+    """Test that subprocess errors are propagated (not caught)."""
+    pkg_path = temp_workspace / "packages" / "test-pkg"
+    pkg_path.mkdir()
+
+    requirements_txt = pkg_path / "requirements.txt"
+    requirements_build_txt = pkg_path / "requirements-build.txt"
+
+    with open(requirements_txt, "w") as f:
+        f.write("requests==2.28.0\n")
+
+    # Mock subprocess.run to raise CalledProcessError
+    with patch('subprocess.run') as mock_run:
+        mock_run.side_effect = subprocess.CalledProcessError(1, "pybuild-deps")
+
+        # The exception should propagate (not be caught)
+        with pytest.raises(subprocess.CalledProcessError):
+            compile_build_requirements(
+                requirements_txt,
+                requirements_build_txt,
+                temp_workspace
+            )
+
+
+def test_compile_build_requirements_file_not_found(temp_workspace):
+    """Test that FileNotFoundError is propagated when pybuild-deps is not found."""
+    pkg_path = temp_workspace / "packages" / "test-pkg"
+    pkg_path.mkdir()
+
+    requirements_txt = pkg_path / "requirements.txt"
+    requirements_build_txt = pkg_path / "requirements-build.txt"
+
+    with open(requirements_txt, "w") as f:
+        f.write("requests==2.28.0\n")
+
+    # Mock subprocess.run to raise FileNotFoundError
+    with patch('subprocess.run') as mock_run:
+        mock_run.side_effect = FileNotFoundError("pybuild-deps command not found")
+
+        # The exception should propagate (not be caught)
+        with pytest.raises(FileNotFoundError):
+            compile_build_requirements(
+                requirements_txt,
+                requirements_build_txt,
+                temp_workspace
+            )
+
+
+def test_compile_build_requirements_correct_paths(temp_workspace):
+    """Test that correct relative paths are used in the command."""
+    pkg_path = temp_workspace / "packages" / "test-pkg"
+    pkg_path.mkdir()
+
+    requirements_txt = pkg_path / "requirements.txt"
+    requirements_build_txt = pkg_path / "requirements-build.txt"
+
+    with open(requirements_txt, "w") as f:
+        f.write("requests==2.28.0\n")
+
+    # Mock subprocess.run
+    with patch('subprocess.run') as mock_run:
+        mock_run.return_value = MagicMock()
+
+        compile_build_requirements(
+            requirements_txt,
+            requirements_build_txt,
+            temp_workspace
+        )
+
+        mock_run.assert_called_once()
+        # Check the command arguments
+        call_args = mock_run.call_args[0][0]
+
+        # Find the input and output file arguments
+        input_file_arg = call_args[5]  # After "pybuild_deps", "compile", "--generate-hashes"
+        output_file_arg = call_args[7]  # After "--output-file"
+
+        # Check that relative paths are used
+        assert input_file_arg == str(requirements_txt.relative_to(temp_workspace))
+        assert output_file_arg == str(requirements_build_txt.relative_to(temp_workspace))
+
+
 def test_generate_package_wrapper_with_programmatic_compilation(temp_workspace):
-    """Test that generate_package_wrapper uses compilation."""
+    """Test that generate_package_wrapper uses both compilation functions."""
     additional_requirements = load_additional_requirements(temp_workspace)
     pkg_path = temp_workspace / "packages" / "test-pkg-1"
 
-    # Mock the compilation
-    with patch('calunga.commands.generate.compile_requirements') as mock_compile:
+    # Mock the compilation functions
+    with patch('calunga.commands.generate.compile_requirements') as mock_compile, \
+         patch('calunga.commands.generate.compile_build_requirements') as mock_compile_build:
         mock_compile.return_value = None
+        mock_compile_build.return_value = None
 
-        # Mock subprocess for requirements-build.txt generation
-        with patch('subprocess.run') as mock_run:
-            mock_run.return_value = MagicMock()
+        generate_package_wrapper("test-pkg-1", pkg_path, additional_requirements, temp_workspace)
 
-            generate_package_wrapper("test-pkg-1", pkg_path, additional_requirements, temp_workspace)
+        # Check that compilation was called
+        mock_compile.assert_called_once()
+        call_args = mock_compile.call_args
+        assert call_args[0][0] == pkg_path / "requirements.in"  # requirements_in_path
+        assert call_args[0][1] == pkg_path / "requirements.txt"  # requirements_txt_path
+        assert call_args[0][2] == temp_workspace  # base_path
+        assert call_args[1]['allow_unsafe'] is True
+        assert call_args[1]['generate_hashes'] is True
 
-            # Check that compilation was called
-            mock_compile.assert_called_once()
-            call_args = mock_compile.call_args
-            assert call_args[0][0] == pkg_path / "requirements.in"  # requirements_in_path
-            assert call_args[0][1] == pkg_path / "requirements.txt"  # requirements_txt_path
-            assert call_args[0][2] == temp_workspace  # base_path
-            assert call_args[1]['allow_unsafe'] is True
-            assert call_args[1]['generate_hashes'] is True
+        # Check that build compilation was called
+        mock_compile_build.assert_called_once()
+        build_call_args = mock_compile_build.call_args
+        assert build_call_args[0][0] == pkg_path / "requirements.txt"  # requirements_txt_path
+        assert build_call_args[0][1] == pkg_path / "requirements-build.txt"  # requirements_build_path
+        assert build_call_args[0][2] == temp_workspace  # base_path
 
 
 def test_generate_konflux_resources(temp_workspace):
