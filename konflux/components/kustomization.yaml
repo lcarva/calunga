@@ -186,6 +186,7 @@ resources:
   - keras
   - keyring
   - kiwisolver
+  - kubernetes
   - langchain
   - langchain-core
   - langsmith

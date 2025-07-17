@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: kubernetes
+  name: kubernetes
+spec:
+  image:
+    name: calunga-tenant/kubernetes
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: kubernetes
+spec:
+  componentName: kubernetes
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/kubernetes
