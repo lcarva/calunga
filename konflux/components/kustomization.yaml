@@ -293,6 +293,7 @@ resources:
   - python-dotenv
   - python-json-logger
   - python-multipart
+  - python-slugify
   - python-telegram-bot
   - pytz
   - pyyaml
