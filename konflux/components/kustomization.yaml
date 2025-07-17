@@ -380,6 +380,7 @@ resources:
   - typing-inspection
   - tzdata
   - tzlocal
+  - uri-template
   - uritemplate
   - urllib3
   - uvicorn

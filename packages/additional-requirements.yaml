@@ -247,3 +247,5 @@ packages:
   zstandard:
     requirements_in:
       - wheel
+  uri-template:
+    package_name: uri-template

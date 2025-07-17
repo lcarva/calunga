@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: uri-template
+  name: uri-template
+spec:
+  image:
+    name: calunga-tenant/uri-template
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: uri-template
+spec:
+  componentName: uri-template
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/uri-template
