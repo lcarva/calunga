@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: python-slugify
+  name: python-slugify
+spec:
+  image:
+    name: calunga-tenant/python-slugify
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: python-slugify
+spec:
+  componentName: python-slugify
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/python-slugify
