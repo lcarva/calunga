@@ -67,6 +67,10 @@ packages:
   gitdb:
     requirements_in:
       - setuptools
+  google-pasta:
+    package_name: google-pasta
+    requirements_in:
+      - setuptools
   grpcio:
     requirements_in:
       - setuptools

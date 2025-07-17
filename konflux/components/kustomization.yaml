@@ -127,6 +127,7 @@ resources:
   - google-cloud-storage
   - google-cloud-vision
   - google-crc32c
+  - google-pasta
   - google-resumable-media
   - googleapis-common-protos
   - graphql-core

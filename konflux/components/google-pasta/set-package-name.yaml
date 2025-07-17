@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: google-pasta
+  name: google-pasta
+spec:
+  image:
+    name: calunga-tenant/google-pasta
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: google-pasta
+spec:
+  componentName: google-pasta
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/google-pasta
