@@ -234,6 +234,7 @@ resources:
   - opentelemetry-sdk
   - opentelemetry-semantic-conventions
   - opentelemetry-util-http
+  - ordered-set
   - oscrypto
   - overrides
   - packaging

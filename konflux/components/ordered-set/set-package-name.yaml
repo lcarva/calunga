@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: ordered-set
+  name: ordered-set
+spec:
+  image:
+    name: calunga-tenant/ordered-set
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: ordered-set
+spec:
+  componentName: ordered-set
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/ordered-set

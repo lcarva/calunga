@@ -249,3 +249,5 @@ packages:
       - wheel
   uri-template:
     package_name: uri-template
+  ordered-set:
+    package_name: ordered-set
