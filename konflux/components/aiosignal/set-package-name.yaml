@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: aiosignal
+  name: aiosignal
+spec:
+  image:
+    name: calunga-tenant/aiosignal
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: aiosignal
+spec:
+  componentName: aiosignal
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/aiosignal

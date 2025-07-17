@@ -9,6 +9,7 @@ resources:
   - aiohappyeyeballs
   - aiohttp
   - aioitertools
+  - aiosignal
   - alembic
   - annotated-types
   - anyio
