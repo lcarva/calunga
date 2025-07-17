@@ -241,3 +241,5 @@ packages:
   zstandard:
     requirements_in:
       - wheel
+  gym-notices:
+    package_name: gym-notices

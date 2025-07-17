@@ -142,6 +142,7 @@ resources:
   - grpcio-status
   - grpcio-tools
   - gunicorn
+  - gym-notices
   - h11
   - h2
   - hatch-fancy-pypi-readme

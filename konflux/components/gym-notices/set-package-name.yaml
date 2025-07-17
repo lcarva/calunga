@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: gym-notices
+  name: gym-notices
+spec:
+  image:
+    name: calunga-tenant/gym-notices
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: gym-notices
+spec:
+  componentName: gym-notices
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/gym-notices
