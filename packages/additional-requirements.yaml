@@ -77,6 +77,8 @@ packages:
   grpcio-health-checking:
     requirements_in:
       - setuptools
+  gym-notices:
+    package_name: gym-notices
   h11:
     requirements_in:
       - setuptools
@@ -199,6 +201,10 @@ packages:
   sortedcontainers:
     requirements_in:
       - setuptools
+  text-unidecode:
+    package_name: text-unidecode
+    requirements_in:
+      - setuptools
   thrift:
     requirements_in:
       - setuptools
@@ -241,5 +247,3 @@ packages:
   zstandard:
     requirements_in:
       - wheel
-  gym-notices:
-    package_name: gym-notices

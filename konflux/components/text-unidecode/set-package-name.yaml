@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: text-unidecode
+  name: text-unidecode
+spec:
+  image:
+    name: calunga-tenant/text-unidecode
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: text-unidecode
+spec:
+  componentName: text-unidecode
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/text-unidecode

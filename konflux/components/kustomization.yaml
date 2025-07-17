@@ -351,6 +351,7 @@ resources:
   - tenacity
   - termcolor
   - terminado
+  - text-unidecode
   - threadpoolctl
   - thrift
   - thriftpy2
