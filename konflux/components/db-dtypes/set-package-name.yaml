@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: db-dtypes
+  name: db-dtypes
+spec:
+  image:
+    name: calunga-tenant/db-dtypes
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: db-dtypes
+spec:
+  componentName: db-dtypes
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/db-dtypes
