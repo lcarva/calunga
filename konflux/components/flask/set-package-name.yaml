@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: flask
+  name: flask
+spec:
+  image:
+    name: calunga-tenant/flask
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: flask
+spec:
+  componentName: flask
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/flask
