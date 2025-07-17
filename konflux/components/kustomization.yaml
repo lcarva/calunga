@@ -74,6 +74,7 @@ resources:
   - deepdiff
   - defusedxml
   - deprecated
+  - dill
   - distlib
   - distro
   - django

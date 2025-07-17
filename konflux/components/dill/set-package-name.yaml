@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: ImageRepository
+metadata:
+  labels:
+    appstudio.redhat.com/component: dill
+  name: dill
+spec:
+  image:
+    name: calunga-tenant/dill
+
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: dill
+spec:
+  componentName: dill
+  containerImage: quay.io/redhat-user-workloads/calunga-tenant/dill
