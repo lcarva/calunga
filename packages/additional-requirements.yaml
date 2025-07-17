@@ -167,6 +167,10 @@ packages:
   python-dotenv:
     requirements_in:
       - setuptools
+  python-slugify:
+    package_name: python-slugify
+    requirements_in:
+      - setuptools
   rfc3339-validator:
     requirements_in:
       - setuptools
