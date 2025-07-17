@@ -375,6 +375,7 @@ resources:
   - typing-inspection
   - tzdata
   - tzlocal
+  - uritemplate
   - urllib3
   - uvicorn
   - uvloop

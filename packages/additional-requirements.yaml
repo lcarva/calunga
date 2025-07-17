@@ -211,6 +211,9 @@ packages:
   typing-inspect:
     requirements_in:
       - setuptools
+  uritemplate:
+    requirements_in:
+      - setuptools
   watchdog:
     requirements_in:
       - setuptools
