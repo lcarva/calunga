@@ -4,9 +4,9 @@
 #
 #    pip-compile --generate-hashes --output-file=./packages/s3fs/requirements.txt ./packages/s3fs/requirements.in
 #
-aiobotocore==2.23.0 \
-    --hash=sha256:0333931365a6c7053aee292fe6ef50c74690c4ae06bb019afdf706cb6f2f5e32 \
-    --hash=sha256:8202cebbf147804a083a02bc282fbfda873bfdd0065fd34b64784acb7757b66e
+aiobotocore==2.23.1 \
+    --hash=sha256:a59f2a78629b97d52f10936b79c73de64e481a8c44a62c1871f088df6c1afc4f \
+    --hash=sha256:d81c54d2eae2406ea9a473fea518fed580cf37bc4fc51ce43ba81546e5305114
     # via s3fs
 aiohappyeyeballs==2.6.1 \
     --hash=sha256:c3f9d0113123803ccadfdf3f0faa505bc78e6a72d1cc4806cbd719826e943558 \
