@@ -10,13 +10,13 @@ azure-core==1.35.0 \
     # via
     #   azure-storage-blob
     #   azure-storage-file-datalake
-azure-storage-blob==12.25.1 \
-    --hash=sha256:1f337aab12e918ec3f1b638baada97550673911c4ceed892acc8e4e891b74167 \
-    --hash=sha256:4f294ddc9bc47909ac66b8934bd26b50d2000278b10ad82cc109764fdc6e0e3b
+azure-storage-blob==12.26.0 \
+    --hash=sha256:5dd7d7824224f7de00bfeb032753601c982655173061e242f13be6e26d78d71f \
+    --hash=sha256:8c5631b8b22b4f53ec5fff2f3bededf34cfef111e2af613ad42c9e6de00a77fe
     # via azure-storage-file-datalake
-azure-storage-file-datalake==12.20.0 \
-    --hash=sha256:8d6932b75470de935998755d980a3296412d8ff2a11631c1d99267ae65f11f03 \
-    --hash=sha256:d32af627ccf7f8523ac4520a4004291b8ca340d7c607545366e1b08822afa01b
+azure-storage-file-datalake==12.21.0 \
+    --hash=sha256:b49cd2156ea325f6f44a8f6674d73c5949e9ac48d6480faf901b2939855fcdd3 \
+    --hash=sha256:e26ef15adbf8f8b2b84823ae01dfc2e5368a2008878288c1b40f1988176af564
     # via -r ./packages/azure-storage-file-datalake/requirements.in
 certifi==2025.7.9 \
     --hash=sha256:c1d2ec05395148ee10cf672ffc28cd37ea0ab0d99f9cc74c43e588cbd111b079 \
