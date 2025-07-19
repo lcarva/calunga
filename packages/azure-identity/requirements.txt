@@ -8,9 +8,9 @@ azure-core==1.35.0 \
     --hash=sha256:8db78c72868a58f3de8991eb4d22c4d368fae226dac1002998d6c50437e7dad1 \
     --hash=sha256:c0be528489485e9ede59b6971eb63c1eaacf83ef53001bfe3904e475e972be5c
     # via azure-identity
-azure-identity==1.23.0 \
-    --hash=sha256:d9cdcad39adb49d4bb2953a217f62aec1f65bbb3c63c9076da2be2a47e53dde4 \
-    --hash=sha256:dbbeb64b8e5eaa81c44c565f264b519ff2de7ff0e02271c49f3cb492762a50b0
+azure-identity==1.23.1 \
+    --hash=sha256:226c1ef982a9f8d5dcf6e0f9ed35eaef2a4d971e7dd86317e9b9d52e70a035e4 \
+    --hash=sha256:7eed28baa0097a47e3fb53bd35a63b769e6b085bb3cb616dfce2b67f28a004a1
     # via -r packages/azure-identity/requirements.in
 certifi==2025.7.14 \
     --hash=sha256:6b31f564a415d79ee77df69d757bb49a5bb53bd9f756cbbe24394ffd6fc1f4b2 \
