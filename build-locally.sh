@@ -42,8 +42,16 @@ ORIGINAL_CONTAINERFILE="$(
 rm -rf "${HERMETO_WORKDIR}"
 mkdir "${HERMETO_WORKDIR}"
 
+mkdir -p "${HERMETO_WORKDIR}/packages"
+cp -r "packages/${PACKAGE}" "${HERMETO_WORKDIR}/packages/"
+
+# Adjust the index-url to use the local registry via podman's network interface.
+sed -i 's_localhost:8080_host.containers.internal:8080_' \
+    "${HERMETO_WORKDIR}/packages/${PACKAGE}/requirements.txt" \
+    "${HERMETO_WORKDIR}/packages/${PACKAGE}/requirements-build.txt"
+
 hermeto fetch-deps --output "${HERMETO_OUTPUT_DIR}" '{
-  "type": "pip", "path": "./packages/'${PACKAGE}'", "allow_binary": "false"
+  "type": "pip", "path": "./'${HERMETO_WORKDIR}'/packages/'${PACKAGE}'", "allow_binary": "true"
 }'
 
 hermeto generate-env --output "${HERMETO_ENV_FILE}" --format env "${HERMETO_OUTPUT_DIR}"\
@@ -65,5 +73,5 @@ buildah build \
     --volume "${PWD}/${HERMETO_WORKDIR}:${HERMETO_BUILD_VOLUME}:Z" \
     -f "${HERMETO_BUILD_CONTAINERFILE}" \
     -t "calunga-${PACKAGE}:latest" \
-    --build-arg-file "packages/${PACKAGE}/argfile.conf" \
-    "packages/${PACKAGE}"
+    --build-arg-file "${HERMETO_WORKDIR}/packages/${PACKAGE}/argfile.conf" \
+    "${HERMETO_WORKDIR}/packages/${PACKAGE}"

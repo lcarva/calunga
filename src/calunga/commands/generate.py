@@ -57,7 +57,9 @@ def compile_requirements(
         "--output-file",
         str(requirements_txt_path.relative_to(base_path)),
         "--allow-unsafe" if allow_unsafe else "--no-allow-unsafe",
-        "--generate-hashes" if generate_hashes else "--no-generate-hashes"
+        "--generate-hashes" if generate_hashes else "--no-generate-hashes",
+        "--index-url",
+        "http://localhost:8080/simple/"
     ]
 
     try:
