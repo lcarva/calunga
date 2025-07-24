@@ -168,7 +168,6 @@ def test_generate_package_wrapper(temp_workspace):
     # Check that files were created
     assert (pkg_path / "pyproject.toml").exists()
     assert (pkg_path / "requirements.in").exists()
-    assert (pkg_path / "argfile.conf").exists()
 
     # Check pyproject.toml content
     with open(pkg_path / "pyproject.toml") as f:
@@ -180,11 +179,6 @@ def test_generate_package_wrapper(temp_workspace):
         content = f.read()
         assert "test-pkg-1" in content
         assert "setuptools" in content
-
-    # Check argfile.conf content
-    with open(pkg_path / "argfile.conf") as f:
-        content = f.read()
-        assert "PACKAGE_NAME=test_pkg_1" in content
 
 
 def test_generate_package_wrapper_skip_existing(temp_workspace):

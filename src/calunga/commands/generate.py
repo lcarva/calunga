@@ -157,15 +157,9 @@ version = "0.0.1"
             base_path
         )
 
-    # Generate argfile.conf
+    # TODO: argfile.conf is no longer needed. Eventually, we should remove it but to avoid an
+    # avalanche of builds, we'll just ignore it for now.
     argfile_path = path / "argfile.conf"
-    if not argfile_path.exists():
-        package_config = additional_requirements.get("packages", {}).get(name, {})
-        package_name = package_config.get("package_name", name.replace("-", "_"))
-
-        argfile_content = f"PACKAGE_NAME={package_name}\n"
-        with open(argfile_path, "w") as f:
-            f.write(argfile_content)
 
 
 def generate_konflux_resources(name: str, base_path: Path) -> None:

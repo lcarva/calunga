@@ -11,7 +11,6 @@ metadata:
     pipelinesascode.tekton.dev/on-target-branch: "[main]"
     pipelinesascode.tekton.dev/on-event: "[push]"
     pipelinesascode.tekton.dev/on-path-change: "[packages/${name}/**]"
-  creationTimestamp: null
   labels:
     appstudio.openshift.io/application: calunga
     appstudio.openshift.io/component: ${name}
@@ -26,12 +25,6 @@ spec:
     value: '{{revision}}'
   - name: output-image
     value: quay.io/redhat-user-workloads/calunga-tenant/${name}:{{revision}}
-  - name: path-context
-    value: packages/${name}
-  - name: dockerfile
-    value: ${containerfile}
-  - name: build-args-file
-    value: packages/${name}/argfile.conf
   - name: hermetic
     value: "true"
   - name: prefetch-input
@@ -41,11 +34,11 @@ spec:
         "path": "./packages/${name}",
         "allow_binary": "false"
       }
+  - name: package-name
+    value: ${name}
   pipelineRef:
     name: build
-  taskRunTemplate: {}
   workspaces:
   - name: git-auth
     secret:
       secretName: '{{ git_auth_secret }}'
-status: {}
