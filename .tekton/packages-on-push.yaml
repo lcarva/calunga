@@ -1,3 +1,4 @@
+---
 apiVersion: tekton.dev/v1
 kind: PipelineRun
 metadata:
@@ -10,7 +11,6 @@ metadata:
     pipelinesascode.tekton.dev/on-target-branch: "[main]"
     pipelinesascode.tekton.dev/on-event: "[push]"
     pipelinesascode.tekton.dev/on-path-change: "[packages/werkzeug/**]"
-  creationTimestamp: null
   labels:
     appstudio.openshift.io/application: calunga
     appstudio.openshift.io/component: werkzeug
@@ -19,32 +19,26 @@ metadata:
   namespace: calunga-tenant
 spec:
   params:
-    - name: git-url
-      value: '{{source_url}}'
-    - name: revision
-      value: '{{revision}}'
-    - name: output-image
-      value: quay.io/redhat-user-workloads/calunga-tenant/werkzeug:{{revision}}
-    - name: path-context
-      value: packages/werkzeug
-    - name: dockerfile
-      value: Containerfile
-    - name: build-args-file
-      value: packages/werkzeug/argfile.conf
-    - name: hermetic
-      value: "true"
-    - name: prefetch-input
-      value: |
-        {
-          "type": "pip",
-          "path": "./packages/werkzeug",
-          "allow_binary": "false"
-        }
+  - name: git-url
+    value: '{{source_url}}'
+  - name: revision
+    value: '{{revision}}'
+  - name: output-image
+    value: quay.io/redhat-user-workloads/calunga-tenant/werkzeug:{{revision}}
+  - name: hermetic
+    value: "true"
+  - name: prefetch-input
+    value: |
+      {
+        "type": "pip",
+        "path": "./packages/werkzeug",
+        "allow_binary": "false"
+      }
+  - name: package-name
+    value: werkzeug
   pipelineRef:
     name: build
-  taskRunTemplate: {}
   workspaces:
-    - name: git-auth
-      secret:
-        secretName: '{{ git_auth_secret }}'
-status: {}
+  - name: git-auth
+    secret:
+      secretName: '{{ git_auth_secret }}'
