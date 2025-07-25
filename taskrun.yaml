@@ -4,29 +4,24 @@ metadata:
   generateName: werkzeug-
 spec:
   params:
-    - name: ociArtifactExpiresAfter
+    - name: IMAGE_EXPIRES_AFTER
       value: 5d
-    - name: ociStorage
+    - name: IMAGE
       value: 'quay.io/lucarval/calunga-tenant/werkzeug:on-pr-afaa49b36646d9973af95f9b3d3b289b7d296729.wheel'
     - name: PREFETCH_ARTIFACT
       value: 'oci:quay.io/redhat-user-workloads/calunga-tenant/werkzeug@sha256:b193eb8551bc4babc57bd1ebb1466685c9c7d962b7cba56a6ee69983be96ce01'
     - name: SCRIPT_RUNNER_IMAGE
       value: 'quay.io/lucarval/calunga-builder:latest'
     - name: SCRIPT
-      value: |
-        #!/bin/bash
-        pwd
-        mkdir -p build
-        echo 'Hello, World!' > build/yolo.txt
-        ls -la .
+      value: calunga-build werkzeug
     - name: SCRIPT_ARTIFACT_RELATIVE_PATH
-      value: build/yolo.txt
+      value: build
     - name: HERMETIC
       value: 'true'
     - name: SOURCE_ARTIFACT
       value: 'oci:quay.io/redhat-user-workloads/calunga-tenant/werkzeug@sha256:05f3a81ad94808fb7a28acfa5d7be8e5776416cbfbe68ce3a77ed068fa8996df'
   taskRef:
-    name: run-script-oci-ta
+    name: build-artifact-oci-ta
     # params:
     #   - name: name
     #     value: run-script-oci-ta
