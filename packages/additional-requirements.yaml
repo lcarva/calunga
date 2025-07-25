@@ -105,6 +105,8 @@ packages:
   jsonpointer:
     requirements_in:
       - setuptools
+  markdown-it-py:
+    package_name: markdown-it-py
   mccabe:
     requirements_in:
       - setuptools

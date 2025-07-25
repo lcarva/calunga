@@ -49,9 +49,9 @@ spec:
       - name: PULP_REPOSITORY
         value: $(params.PULP_REPOSITORY)
       - name: IMAGES_TXT
-        value: $(params.SNAPSHOT_PATH)/images.txt
+        value: $(workspaces.data.path)/images.txt
       - name: FILES_DIR
-        value: $(params.SNAPSHOT_PATH)/files
+        value: $(workspaces.data.path)/files
     volumeMounts:
       - name: pulp-secret
         mountPath: "/etc/pulp-secret"
@@ -75,12 +75,12 @@ spec:
         set -euo pipefail
 
         AUTHFILE='/tmp/auth.json'
-        select-oci-auth "$IMAGE" > "${AUTHFILE}"
-
         mkdir -p "${FILES_DIR}"
-        pushd "${FILES_DIR}" > /dev/null
-        < "${IMAGES_TXT}" xargs -L 1 retry oras pull --registry-config "${AUTHFILE}"
-        popd > /dev/null
+        while read -r IMAGE; do
+          echo "Processing ${IMAGE}"
+          select-oci-auth "${IMAGE}" > "${AUTHFILE}"
+          retry oras pull --registry-config "${AUTHFILE}" "${IMAGE}" -o "${FILES_DIR}"
+        done < "${IMAGES_TXT}"
 
         ls -la "${FILES_DIR}"
 

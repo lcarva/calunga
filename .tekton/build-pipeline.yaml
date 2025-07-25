@@ -105,9 +105,9 @@ spec:
       - name: SCRIPT_RUNNER_IMAGE
         value: quay.io/lucarval/calunga-builder:latest
       - name: SCRIPT
-        value: calunga-build $(params.package-name)
+        value: "calunga-build $(params.package-name)"
       - name: HERMETIC
-        value: "true"
+        value: $(params.hermetic)
       - name: SCRIPT_ARTIFACT_RELATIVE_PATH
         value: build
     taskRef:

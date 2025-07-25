@@ -35,7 +35,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: absl-py
+    value: absl_py
   pipelineRef:
     name: build
   workspaces:
@@ -387,7 +387,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: annotated-types
+    value: annotated_types
   pipelineRef:
     name: build
   workspaces:
@@ -563,7 +563,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: argon2-cffi
+    value: argon2_cffi
   pipelineRef:
     name: build
   workspaces:
@@ -827,7 +827,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: async-lru
+    value: async_lru
   pipelineRef:
     name: build
   workspaces:
@@ -871,7 +871,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: async-timeout
+    value: async_timeout
   pipelineRef:
     name: build
   workspaces:
@@ -1003,7 +1003,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: aws-lambda-powertools
+    value: aws_lambda_powertools
   pipelineRef:
     name: build
   workspaces:
@@ -1135,7 +1135,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: azure-core
+    value: azure_core
   pipelineRef:
     name: build
   workspaces:
@@ -1179,7 +1179,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: azure-identity
+    value: azure_identity
   pipelineRef:
     name: build
   workspaces:
@@ -1223,7 +1223,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: azure-keyvault-secrets
+    value: azure_keyvault_secrets
   pipelineRef:
     name: build
   workspaces:
@@ -1267,7 +1267,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: azure-storage-blob
+    value: azure_storage_blob
   pipelineRef:
     name: build
   workspaces:
@@ -1311,7 +1311,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: azure-storage-file-datalake
+    value: azure_storage_file_datalake
   pipelineRef:
     name: build
   workspaces:
@@ -1443,7 +1443,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: backports-tarfile
+    value: backports_tarfile
   pipelineRef:
     name: build
   workspaces:
@@ -2147,7 +2147,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: charset-normalizer
+    value: charset_normalizer
   pipelineRef:
     name: build
   workspaces:
@@ -2279,7 +2279,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: click-plugins
+    value: click_plugins
   pipelineRef:
     name: build
   workspaces:
@@ -2719,7 +2719,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: databricks-sdk
+    value: databricks_sdk
   pipelineRef:
     name: build
   workspaces:
@@ -2763,7 +2763,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: databricks-sql-connector
+    value: databricks_sql_connector
   pipelineRef:
     name: build
   workspaces:
@@ -2807,7 +2807,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: dataclasses-json
+    value: dataclasses_json
   pipelineRef:
     name: build
   workspaces:
@@ -3335,7 +3335,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: docstring-parser
+    value: docstring_parser
   pipelineRef:
     name: build
   workspaces:
@@ -3599,7 +3599,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: email-validator
+    value: email_validator
   pipelineRef:
     name: build
   workspaces:
@@ -3643,7 +3643,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: et-xmlfile
+    value: et_xmlfile
   pipelineRef:
     name: build
   workspaces:
@@ -4479,7 +4479,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: gcloud-aio-auth
+    value: gcloud_aio_auth
   pipelineRef:
     name: build
   workspaces:
@@ -4523,7 +4523,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: gcloud-aio-bigquery
+    value: gcloud_aio_bigquery
   pipelineRef:
     name: build
   workspaces:
@@ -4743,7 +4743,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-ads
+    value: google_ads
   pipelineRef:
     name: build
   workspaces:
@@ -4787,7 +4787,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-api-core
+    value: google_api_core
   pipelineRef:
     name: build
   workspaces:
@@ -4831,7 +4831,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-api-python-client
+    value: google_api_python_client
   pipelineRef:
     name: build
   workspaces:
@@ -4875,7 +4875,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-auth
+    value: google_auth
   pipelineRef:
     name: build
   workspaces:
@@ -4919,7 +4919,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-auth-oauthlib
+    value: google_auth_oauthlib
   pipelineRef:
     name: build
   workspaces:
@@ -4963,7 +4963,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-cloud-aiplatform
+    value: google_cloud_aiplatform
   pipelineRef:
     name: build
   workspaces:
@@ -5007,7 +5007,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-cloud-audit-log
+    value: google_cloud_audit_log
   pipelineRef:
     name: build
   workspaces:
@@ -5051,7 +5051,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-cloud-bigquery
+    value: google_cloud_bigquery
   pipelineRef:
     name: build
   workspaces:
@@ -5095,7 +5095,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-cloud-bigquery-storage
+    value: google_cloud_bigquery_storage
   pipelineRef:
     name: build
   workspaces:
@@ -5139,7 +5139,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-cloud-bigtable
+    value: google_cloud_bigtable
   pipelineRef:
     name: build
   workspaces:
@@ -5183,7 +5183,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-cloud-dataproc
+    value: google_cloud_dataproc
   pipelineRef:
     name: build
   workspaces:
@@ -5227,7 +5227,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-cloud-logging
+    value: google_cloud_logging
   pipelineRef:
     name: build
   workspaces:
@@ -5271,7 +5271,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-cloud-pubsub
+    value: google_cloud_pubsub
   pipelineRef:
     name: build
   workspaces:
@@ -5315,7 +5315,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-cloud-resource-manager
+    value: google_cloud_resource_manager
   pipelineRef:
     name: build
   workspaces:
@@ -5359,7 +5359,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-cloud-secret-manager
+    value: google_cloud_secret_manager
   pipelineRef:
     name: build
   workspaces:
@@ -5403,7 +5403,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-cloud-storage
+    value: google_cloud_storage
   pipelineRef:
     name: build
   workspaces:
@@ -5447,7 +5447,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-cloud-vision
+    value: google_cloud_vision
   pipelineRef:
     name: build
   workspaces:
@@ -5491,7 +5491,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-crc32c
+    value: google_crc32c
   pipelineRef:
     name: build
   workspaces:
@@ -5535,7 +5535,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: google-resumable-media
+    value: google_resumable_media
   pipelineRef:
     name: build
   workspaces:
@@ -5579,7 +5579,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: googleapis-common-protos
+    value: googleapis_common_protos
   pipelineRef:
     name: build
   workspaces:
@@ -5623,7 +5623,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: graphql-core
+    value: graphql_core
   pipelineRef:
     name: build
   workspaces:
@@ -5755,7 +5755,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: grpc-google-iam-v1
+    value: grpc_google_iam_v1
   pipelineRef:
     name: build
   workspaces:
@@ -5843,7 +5843,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: grpcio-health-checking
+    value: grpcio_health_checking
   pipelineRef:
     name: build
   workspaces:
@@ -5887,7 +5887,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: grpcio-status
+    value: grpcio_status
   pipelineRef:
     name: build
   workspaces:
@@ -5931,7 +5931,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: grpcio-tools
+    value: grpcio_tools
   pipelineRef:
     name: build
   workspaces:
@@ -6107,7 +6107,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: hatch-fancy-pypi-readme
+    value: hatch_fancy_pypi_readme
   pipelineRef:
     name: build
   workspaces:
@@ -6151,7 +6151,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: hatch-vcs
+    value: hatch_vcs
   pipelineRef:
     name: build
   workspaces:
@@ -6767,7 +6767,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: importlib-metadata
+    value: importlib_metadata
   pipelineRef:
     name: build
   workspaces:
@@ -6811,7 +6811,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: importlib-resources
+    value: importlib_resources
   pipelineRef:
     name: build
   workspaces:
@@ -7207,7 +7207,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: jaraco-context
+    value: jaraco_context
   pipelineRef:
     name: build
   workspaces:
@@ -7251,7 +7251,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: jaraco-functools
+    value: jaraco_functools
   pipelineRef:
     name: build
   workspaces:
@@ -7647,7 +7647,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: jupyter-client
+    value: jupyter_client
   pipelineRef:
     name: build
   workspaces:
@@ -7691,7 +7691,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: jupyter-core
+    value: jupyter_core
   pipelineRef:
     name: build
   workspaces:
@@ -7911,7 +7911,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: langchain-core
+    value: langchain_core
   pipelineRef:
     name: build
   workspaces:
@@ -7999,7 +7999,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: lazy-object-proxy
+    value: lazy_object_proxy
   pipelineRef:
     name: build
   workspaces:
@@ -8439,7 +8439,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: matplotlib-inline
+    value: matplotlib_inline
   pipelineRef:
     name: build
   workspaces:
@@ -8571,7 +8571,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: meson-python
+    value: meson_python
   pipelineRef:
     name: build
   workspaces:
@@ -8615,7 +8615,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: microsoft-kiota-http
+    value: microsoft_kiota_http
   pipelineRef:
     name: build
   workspaces:
@@ -8747,7 +8747,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: more-itertools
+    value: more_itertools
   pipelineRef:
     name: build
   workspaces:
@@ -8879,7 +8879,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: msal-extensions
+    value: msal_extensions
   pipelineRef:
     name: build
   workspaces:
@@ -9099,7 +9099,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: mypy-extensions
+    value: mypy_extensions
   pipelineRef:
     name: build
   workspaces:
@@ -9187,7 +9187,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: nest-asyncio
+    value: nest_asyncio
   pipelineRef:
     name: build
   workspaces:
@@ -9583,7 +9583,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: opentelemetry-exporter-otlp
+    value: opentelemetry_exporter_otlp
   pipelineRef:
     name: build
   workspaces:
@@ -9627,7 +9627,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: opentelemetry-exporter-prometheus
+    value: opentelemetry_exporter_prometheus
   pipelineRef:
     name: build
   workspaces:
@@ -9671,7 +9671,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: opentelemetry-instrumentation
+    value: opentelemetry_instrumentation
   pipelineRef:
     name: build
   workspaces:
@@ -9715,7 +9715,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: opentelemetry-instrumentation-requests
+    value: opentelemetry_instrumentation_requests
   pipelineRef:
     name: build
   workspaces:
@@ -9759,7 +9759,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: opentelemetry-proto
+    value: opentelemetry_proto
   pipelineRef:
     name: build
   workspaces:
@@ -9803,7 +9803,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: opentelemetry-sdk
+    value: opentelemetry_sdk
   pipelineRef:
     name: build
   workspaces:
@@ -9847,7 +9847,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: opentelemetry-semantic-conventions
+    value: opentelemetry_semantic_conventions
   pipelineRef:
     name: build
   workspaces:
@@ -9891,7 +9891,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: opentelemetry-util-http
+    value: opentelemetry_util_http
   pipelineRef:
     name: build
   workspaces:
@@ -10111,7 +10111,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pandas-gbq
+    value: pandas_gbq
   pipelineRef:
     name: build
   workspaces:
@@ -10683,7 +10683,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pkgutil-resolve-name
+    value: pkgutil_resolve_name
   pipelineRef:
     name: build
   workspaces:
@@ -10859,7 +10859,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: poetry-core
+    value: poetry_core
   pipelineRef:
     name: build
   workspaces:
@@ -10903,7 +10903,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: poetry-plugin-export
+    value: poetry_plugin_export
   pipelineRef:
     name: build
   workspaces:
@@ -10991,7 +10991,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pre-commit
+    value: pre_commit
   pipelineRef:
     name: build
   workspaces:
@@ -11035,7 +11035,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: prometheus-client
+    value: prometheus_client
   pipelineRef:
     name: build
   workspaces:
@@ -11079,7 +11079,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: prompt-toolkit
+    value: prompt_toolkit
   pipelineRef:
     name: build
   workspaces:
@@ -11167,7 +11167,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: proto-plus
+    value: proto_plus
   pipelineRef:
     name: build
   workspaces:
@@ -11343,7 +11343,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pure-eval
+    value: pure_eval
   pipelineRef:
     name: build
   workspaces:
@@ -11519,7 +11519,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pyasn1-modules
+    value: pyasn1_modules
   pipelineRef:
     name: build
   workspaces:
@@ -11739,7 +11739,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pydantic-settings
+    value: pydantic_settings
   pipelineRef:
     name: build
   workspaces:
@@ -12179,7 +12179,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pyproject-api
+    value: pyproject_api
   pipelineRef:
     name: build
   workspaces:
@@ -12223,7 +12223,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pyproject-hooks
+    value: pyproject_hooks
   pipelineRef:
     name: build
   workspaces:
@@ -12267,7 +12267,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pyproject-metadata
+    value: pyproject_metadata
   pipelineRef:
     name: build
   workspaces:
@@ -12443,7 +12443,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pytest-asyncio
+    value: pytest_asyncio
   pipelineRef:
     name: build
   workspaces:
@@ -12487,7 +12487,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pytest-cov
+    value: pytest_cov
   pipelineRef:
     name: build
   workspaces:
@@ -12531,7 +12531,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pytest-mock
+    value: pytest_mock
   pipelineRef:
     name: build
   workspaces:
@@ -12575,7 +12575,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: pytest-xdist
+    value: pytest_xdist
   pipelineRef:
     name: build
   workspaces:
@@ -12663,7 +12663,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: python-dotenv
+    value: python_dotenv
   pipelineRef:
     name: build
   workspaces:
@@ -12707,7 +12707,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: python-json-logger
+    value: python_json_logger
   pipelineRef:
     name: build
   workspaces:
@@ -12751,7 +12751,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: python-multipart
+    value: python_multipart
   pipelineRef:
     name: build
   workspaces:
@@ -12839,7 +12839,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: python-telegram-bot
+    value: python_telegram_bot
   pipelineRef:
     name: build
   workspaces:
@@ -12971,7 +12971,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: readme-renderer
+    value: readme_renderer
   pipelineRef:
     name: build
   workspaces:
@@ -13147,7 +13147,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: requests-aws4auth
+    value: requests_aws4auth
   pipelineRef:
     name: build
   workspaces:
@@ -13191,7 +13191,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: requests-file
+    value: requests_file
   pipelineRef:
     name: build
   workspaces:
@@ -13323,7 +13323,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: rfc3339-validator
+    value: rfc3339_validator
   pipelineRef:
     name: build
   workspaces:
@@ -13411,7 +13411,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: rfc3986-validator
+    value: rfc3986_validator
   pipelineRef:
     name: build
   workspaces:
@@ -13499,7 +13499,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: rich-toolkit
+    value: rich_toolkit
   pipelineRef:
     name: build
   workspaces:
@@ -13719,7 +13719,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: scikit-build-core
+    value: scikit_build_core
   pipelineRef:
     name: build
   workspaces:
@@ -13895,7 +13895,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: sentry-sdk
+    value: sentry_sdk
   pipelineRef:
     name: build
   workspaces:
@@ -14027,7 +14027,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: setuptools-scm
+    value: setuptools_scm
   pipelineRef:
     name: build
   workspaces:
@@ -14203,7 +14203,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: slack-sdk
+    value: slack_sdk
   pipelineRef:
     name: build
   workspaces:
@@ -14247,7 +14247,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: smart-open
+    value: smart_open
   pipelineRef:
     name: build
   workspaces:
@@ -14379,7 +14379,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: snowflake-connector-python
+    value: snowflake_connector_python
   pipelineRef:
     name: build
   workspaces:
@@ -14599,7 +14599,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: sqlalchemy-bigquery
+    value: sqlalchemy_bigquery
   pipelineRef:
     name: build
   workspaces:
@@ -14643,7 +14643,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: sqlalchemy-spanner
+    value: sqlalchemy_spanner
   pipelineRef:
     name: build
   workspaces:
@@ -14775,7 +14775,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: stack-data
+    value: stack_data
   pipelineRef:
     name: build
   workspaces:
@@ -15655,7 +15655,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: trove-classifiers
+    value: trove_classifiers
   pipelineRef:
     name: build
   workspaces:
@@ -15787,7 +15787,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: types-protobuf
+    value: types_protobuf
   pipelineRef:
     name: build
   workspaces:
@@ -15831,7 +15831,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: types-psutil
+    value: types_psutil
   pipelineRef:
     name: build
   workspaces:
@@ -15875,7 +15875,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: types-python-dateutil
+    value: types_python_dateutil
   pipelineRef:
     name: build
   workspaces:
@@ -15919,7 +15919,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: types-pytz
+    value: types_pytz
   pipelineRef:
     name: build
   workspaces:
@@ -15963,7 +15963,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: types-pyyaml
+    value: types_pyyaml
   pipelineRef:
     name: build
   workspaces:
@@ -16007,7 +16007,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: types-requests
+    value: types_requests
   pipelineRef:
     name: build
   workspaces:
@@ -16051,7 +16051,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: types-setuptools
+    value: types_setuptools
   pipelineRef:
     name: build
   workspaces:
@@ -16095,7 +16095,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: typing-extensions
+    value: typing_extensions
   pipelineRef:
     name: build
   workspaces:
@@ -16139,7 +16139,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: typing-inspect
+    value: typing_inspect
   pipelineRef:
     name: build
   workspaces:
@@ -16183,7 +16183,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: typing-inspection
+    value: typing_inspection
   pipelineRef:
     name: build
   workspaces:
@@ -16579,7 +16579,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: weaviate-client
+    value: weaviate_client
   pipelineRef:
     name: build
   workspaces:
@@ -16711,7 +16711,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: websocket-client
+    value: websocket_client
   pipelineRef:
     name: build
   workspaces:
