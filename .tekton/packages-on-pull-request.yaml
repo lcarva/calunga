@@ -28,12 +28,6 @@ spec:
       value: quay.io/redhat-user-workloads/calunga-tenant/werkzeug:on-pr-{{revision}}
     - name: image-expires-after
       value: 5d
-    - name: path-context
-      value: packages/werkzeug
-    - name: dockerfile
-      value: Containerfile
-    - name: build-args-file
-      value: packages/werkzeug/argfile.conf
     - name: hermetic
       value: "true"
     - name: prefetch-input
@@ -47,9 +41,7 @@ spec:
       value: werkzeug
   pipelineRef:
     name: build
-  taskRunTemplate: {}
   workspaces:
     - name: git-auth
       secret:
         secretName: '{{ git_auth_secret }}'
-status: {}
