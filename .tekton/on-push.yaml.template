@@ -35,7 +35,7 @@ spec:
         "allow_binary": "false"
       }
   - name: package-name
-    value: ${name}
+    value: ${package_name}
   pipelineRef:
     name: build
   workspaces:

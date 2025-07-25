@@ -241,6 +241,12 @@ spec:
         # Create an array of absolute paths for files found under the artifact path
         ARTIFACT_FILES=(*)
 
+        # Check if any files were found
+        if [ ${#ARTIFACT_FILES[@]} -eq 0 ]; then
+          echo "No files found in artifact directory"
+          exit 1
+        fi
+
         echo "Pushing OCI artifact to ${IMAGE}"
         if ! retry oras push "$IMAGE" \
           --registry-config "${AUTHFILE}" \

@@ -215,9 +215,13 @@ spec:
         f.write(set_package_name_content)
 
 
-def generate_pac_resources(name: str, path: Path, base_path: Path) -> None:
+def generate_pac_resources(name: str, path: Path, base_path: Path, additional_requirements: Dict[str, Any]) -> None:
     """Generate Pipeline as Code resources."""
     console.print(f"  [blue]Generating Pipeline as Code resources for {name}[/blue]")
+
+
+    package_config = additional_requirements.get("packages", {}).get(name, {})
+    package_name = package_config.get("package_name", name.replace("-", "_"))
 
     # Determine containerfile
     containerfile = "Containerfile"
@@ -241,6 +245,7 @@ def generate_pac_resources(name: str, path: Path, base_path: Path) -> None:
 
             # Simple variable substitution
             substituted_content = template_content.replace("${name}", name)
+            substituted_content = substituted_content.replace("${package_name}", package_name)
             substituted_content = substituted_content.replace("${containerfile}", containerfile)
 
             # Append to output file
@@ -338,7 +343,7 @@ def generate(
                 console.print("  [dim]Skipping Konflux resource generation[/dim]")
 
             if not skip_pac:
-                generate_pac_resources(name, package_path, base_path)
+                generate_pac_resources(name, package_path, base_path, additional_requirements)
             else:
                 console.print("  [dim]Skipping Pipeline as Code generation[/dim]")
 
