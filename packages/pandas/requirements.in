@@ -1,6 +1,0 @@
-pandas
-# Force these build dependencies as it doesn't seem to be detected pybuild-deps...
-ninja
-cmake
-patchelf
-hatch-fancy-pypi-readme

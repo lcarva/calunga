@@ -1,4 +1,0 @@
-patchelf
-# Force these build dependencies as it doesn't seem to be detected bybuild-deps...
-ninja
-hatch-fancy-pypi-readme
