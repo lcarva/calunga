@@ -50,10 +50,6 @@ spec:
       1h, 2d, 3w for hours, days, and weeks, respectively.
     name: image-expires-after
   - default: "false"
-    description: Build a source image.
-    name: build-source-image
-    type: string
-  - default: "false"
     description: Add built image into an OCI image index
     name: build-image-index
     type: string
@@ -250,36 +246,6 @@ spec:
       resolver: bundles
     when:
     - input: $(tasks.init.results.build)
-      operator: in
-      values:
-      - "true"
-  - name: build-source-image
-    params:
-    - name: BINARY_IMAGE
-      value: $(tasks.build-image-index.results.IMAGE_URL)
-    - name: BINARY_IMAGE_DIGEST
-      value: $(tasks.build-image-index.results.IMAGE_DIGEST)
-    - name: SOURCE_ARTIFACT
-      value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
-    - name: CACHI2_ARTIFACT
-      value: $(tasks.prefetch-dependencies.results.CACHI2_ARTIFACT)
-    runAfter:
-    - build-image-index
-    taskRef:
-      params:
-      - name: name
-        value: source-build-oci-ta
-      - name: bundle
-        value: quay.io/konflux-ci/tekton-catalog/task-source-build-oci-ta:0.3@sha256:b1eb49583b41872b27356fee20d5f0eb6ff7f5cdeacde7ffb39655f031104728
-      - name: kind
-        value: task
-      resolver: bundles
-    when:
-    - input: $(tasks.init.results.build)
-      operator: in
-      values:
-      - "true"
-    - input: $(params.build-source-image)
       operator: in
       values:
       - "true"
