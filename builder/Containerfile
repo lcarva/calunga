@@ -6,4 +6,6 @@ RUN dnf install -y cmake
 USER 1001
 # TODO: Remove the pulp-cli wheel once an image exists:
 # https://github.com/pulp/pulp-oci-images/issues/744
-RUN pip install build wheel pulp-cli
+RUN pip install build pulp-cli
+
+COPY build.sh /usr/local/bin/calunga-build
