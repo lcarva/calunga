@@ -70,6 +70,9 @@ spec:
       VMs
     name: privileged-nested
     type: string
+  - description: Name of the package to build
+    name: package-name
+    type: string
   results:
   - description: ""
     name: IMAGE_URL
@@ -156,6 +159,28 @@ spec:
       workspace: git-auth
     - name: netrc
       workspace: netrc
+  - name: build-artifact
+    params:
+      - name: IMAGE_EXPIRES_AFTER
+        value: $(params.image-expires-after)
+      - name: IMAGE
+        value: $(params.output-image)
+      - name: PREFETCH_ARTIFACT
+        value: $(tasks.prefetch-dependencies.results.CACHI2_ARTIFACT)
+      - name: SOURCE_ARTIFACT
+        value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
+      - name: SCRIPT_RUNNER_IMAGE
+        value: quay.io/lucarval/calunga-builder:latest
+      - name: SCRIPT
+        value: calunga-build $(params.package-name)
+      - name: HERMETIC
+        value: "true"
+      - name: SCRIPT_ARTIFACT_RELATIVE_PATH
+        value: build
+    runAfter:
+    - prefetch-dependencies
+    taskRef:
+      name: build-artifact-oci-ta
   - name: build-python-wheel
     params:
       - name: ociArtifactExpiresAfter

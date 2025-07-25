@@ -43,6 +43,8 @@ spec:
           "path": "./packages/werkzeug",
           "allow_binary": "false"
         }
+    - name: package-name
+      value: werkzeug
   pipelineRef:
     name: build
   taskRunTemplate: {}
