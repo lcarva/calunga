@@ -191,31 +191,6 @@ spec:
       runAfter:
         - reduce-snapshot
 
-    - name: extract-binaries-from-image
-      taskRef:
-        resolver: "git"
-        params:
-          - name: url
-            value: https://github.com/konflux-ci/release-service-catalog.git
-          - name: revision
-            value: production
-          - name: pathInRepo
-            value: tasks/managed/extract-binaries-from-image/extract-binaries-from-image.yaml
-      params:
-        - name: subdirectory
-          value: $(context.pipelineRun.uid)
-        - name: snapshotPath
-          value: "$(tasks.collect-data.results.snapshotSpec)"
-        - name: taskGitUrl
-          value: "https://github.com/konflux-ci/release-service-catalog.git"
-        - name: taskGitRevision
-          value: "production"
-      workspaces:
-        - name: data
-          workspace: release-workspace
-      runAfter:
-        - verify-enterprise-contract
-
     - name: push-py-pulp
       taskRef:
         resolver: "git"
@@ -227,10 +202,8 @@ spec:
           - name: pathInRepo
             value: release/push-py-pulp-task.yaml
       params:
-        - name: IMAGES
+        - name: SNAPSHOT_PATH
           value: "$(workspaces.data.path)/$(tasks.collect-data.results.snapshotSpec)"
-        - name: SUBDIRECTORY
-          value: $(tasks.extract-binaries-from-image.results.binaries_path)
         - name: PULP_BASE_URL
           value: $(params.pulpBaseUrl)
         - name: PULP_API_ROOT
@@ -246,7 +219,6 @@ spec:
           workspace: release-workspace
       runAfter:
         - verify-enterprise-contract
-        - extract-binaries-from-image
 
     # TODO: Consider re-enabling this.
     # - name: update-cr-status

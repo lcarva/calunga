@@ -4,15 +4,11 @@ metadata:
   name: push-py-pulp
 spec:
   description: |
-    A task to push Python packages to a Pulp repository.
-    Currently just a placeholder that prints hello world.
+    A task to push Python packages from an OCI artifact to a Pulp repository.
   params:
-    - name: IMAGES
+    - name: SNAPSHOT_PATH
       type: string
       description: Path to the snapshot spec file containing image information
-    - name: SUBDIRECTORY
-      type: string
-      description: The subdirectory to use for the workspace
     - name: PULP_SECRET_NAME
       type: string
       description: >-
@@ -38,11 +34,12 @@ spec:
     - name: pulp-secret
       secret:
         secretName: $(params.PULP_SECRET_NAME)
+    - name: workdir
+      emptyDir: {}
   stepTemplate:
-    workingDir: "$(workspaces.data.path)/$(params.SUBDIRECTORY)"
     env:
-      - name: IMAGES
-        value: $(params.IMAGES)
+      - name: SNAPSHOT_PATH
+        value: $(params.SNAPSHOT_PATH)
       - name: PULP_BASE_URL
         value: $(params.PULP_BASE_URL)
       - name: PULP_API_ROOT
@@ -51,23 +48,51 @@ spec:
         value: $(params.PULP_DOMAIN)
       - name: PULP_REPOSITORY
         value: $(params.PULP_REPOSITORY)
+      - name: IMAGES_TXT
+        value: $(params.SNAPSHOT_PATH)/images.txt
+      - name: FILES_DIR
+        value: $(params.SNAPSHOT_PATH)/files
+    volumeMounts:
+      - name: pulp-secret
+        mountPath: "/etc/pulp-secret"
+        readOnly: true
+      - name: workdir
+        mountPath: "/var/workdir"
+    workingDir: "/var/workdir"
   steps:
+    - name: get-image-urls
+      image: quay.io/konflux-ci/buildah-task:latest@sha256:b82d465a06c926882d02b721cf8a8476048711332749f39926a01089cf85a3f9
+      script: |
+        #!/bin/bash
+        set -euo pipefail
+
+        < "${SNAPSHOT_PATH}" jq -r '.components[].containerImage' | tee "${IMAGES_TXT}"
+
+    - name: extract-artifacts
+      image: quay.io/konflux-ci/oras:latest@sha256:1beeecce012c99794568f74265c065839f9703d28306a8430b667f639343a98b
+      script: |
+        #!/bin/bash
+        set -euo pipefail
+
+        AUTHFILE='/tmp/auth.json'
+        select-oci-auth "$IMAGE" > "${AUTHFILE}"
+
+        mkdir -p "${FILES_DIR}"
+        pushd "${FILES_DIR}" > /dev/null
+        < "${IMAGES_TXT}" xargs -L 1 retry oras pull --registry-config "${AUTHFILE}"
+        popd > /dev/null
+
+        ls -la "${FILES_DIR}"
+
     - name: upload
       image: quay.io/lucarval/calunga-builder:latest
       # TODO: Remove this after a proper image is used. The image should be pinned.
       imagePullPolicy: Always
-      volumeMounts:
-        - name: pulp-secret
-          mountPath: "/etc/pulp-secret"
-          readOnly: true
       script: |
         #!/usr/bin/env bash
-        echo "Hello World from push-py-pulp task!"
-        echo "Workspace contents:"
-        ls -la .
-        pwd
 
-        ls -la /etc/pulp-secret
+        cd "${FILES_DIR}"
+        ls -la .
 
         pulp --help
 
