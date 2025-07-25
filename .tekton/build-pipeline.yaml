@@ -181,35 +181,6 @@ spec:
     - prefetch-dependencies
     taskRef:
       name: build-artifact-oci-ta
-  - name: build-python-wheel
-    params:
-      - name: ociArtifactExpiresAfter
-        value: $(params.image-expires-after)
-      - name: ociStorage
-        value: $(params.output-image).wheel
-      - name: PREFETCH_ARTIFACT
-        value: $(tasks.prefetch-dependencies.results.CACHI2_ARTIFACT)
-      - name: SCRIPT_RUNNER_IMAGE
-        value: quay.io/lucarval/calunga-builder:latest
-      - name: SCRIPT
-        value: |
-          #!/bin/bash
-          echo 'Hello, World!'
-      - name: HERMETIC
-        value: "true"
-      - name: SOURCE_ARTIFACT
-        value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
-    runAfter:
-    - prefetch-dependencies
-    taskRef:
-      params:
-      - name: name
-        value: run-script-oci-ta
-      - name: bundle
-        value: quay.io/konflux-ci/tekton-catalog/task-run-script-oci-ta:0.1@sha256:1dcc9805bdc20708f87126455c01e0c49be9d79f0c140220a71c85e49979b96d
-      - name: kind
-        value: task
-      resolver: bundles
   - name: build-container
     params:
     - name: IMAGE
