@@ -116,9 +116,9 @@ google-auth==2.40.3 \
     # via
     #   google-api-core
     #   google-cloud-pubsub
-google-cloud-pubsub==2.31.0 \
-    --hash=sha256:2dbae4ef079403615856868f8bae20550eb25c0f89396a185ce2c72b029fb060 \
-    --hash=sha256:d190cae8f18039d7d7301d3511d3a15cbe1df3d4fc89b871807b86f66349aaea
+google-cloud-pubsub==2.31.1 \
+    --hash=sha256:85e9ee330874d725dacf20d65efd52e5ec04141ca04f023d135b961a68b372b0 \
+    --hash=sha256:f4214f692da435afcdfb41e77cfa962238db96e4a4ba64637aaa710442d9c532
     # via -r packages/google-cloud-pubsub/requirements.in
 googleapis-common-protos[grpc]==1.70.0 \
     --hash=sha256:0e1b44e0ea153e6594f9f394fef15193a68aaaea2d843f83e2742717ca753257 \
