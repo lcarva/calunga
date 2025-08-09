@@ -102,9 +102,9 @@ charset-normalizer==3.4.2 \
     --hash=sha256:fcbe676a55d7445b22c10967bceaaf0ee69407fbe0ece4d032b6eb8d4565982a \
     --hash=sha256:fdb20a30fe1175ecabed17cbf7812f7b804b8a315a25f24678bcdf120a90077f
     # via requests
-datadog==0.52.0 \
-    --hash=sha256:00ea908a2d7bf719218ad40116f4242f8accccfb9d6f2724344a10b2d8e46a9a \
-    --hash=sha256:8b99a508bed4879dc81643418dc89317009c6f04263c417ebbfd31e6f3019ef1
+datadog==0.52.1 \
+    --hash=sha256:44c6deb563c4522dba206fba2e2bb93d3b04113c40191851ba3a241d82b5fd0b \
+    --hash=sha256:b8c92cd761618ee062f114171067e4c400d48c9f0dad16cb285042439d9d5d4e
     # via -r packages/datadog/requirements.in
 idna==3.10 \
     --hash=sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9 \
