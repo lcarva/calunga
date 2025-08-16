@@ -148,9 +148,9 @@ poetry-core==2.1.3 \
     --hash=sha256:0522a015477ed622c89aad56a477a57813cace0c8e7ff2a2906b7ef4a2e296a4 \
     --hash=sha256:2c704f05016698a54ca1d327f46ce2426d72eaca6ff614132c8477c292266771
     # via rsa
-setuptools-scm==8.3.1 \
-    --hash=sha256:332ca0d43791b818b841213e76b1971b7711a960761c5bea5fc5cdb5196fbce3 \
-    --hash=sha256:3d555e92b75dacd037d32bafdf94f97af51ea29ae8c7b234cf94b7a5bd242a63
+setuptools-scm==9.2.0 \
+    --hash=sha256:6662c9b9497b6c9bf13bead9d7a9084756f68238302c5ed089fb4dbd29d102d7 \
+    --hash=sha256:c551ef54e2270727ee17067881c9687ca2aedf179fa5b8f3fab9e8d73bdc421f
     # via
     #   charset-normalizer
     #   pluggy
