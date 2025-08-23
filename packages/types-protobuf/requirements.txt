@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=./packages/types-protobuf/requirements.txt ./packages/types-protobuf/requirements.in
 #
-types-protobuf==6.30.2.20250703 \
-    --hash=sha256:609a974754bbb71fa178fc641f51050395e8e1849f49d0420a6281ed8d1ddf46 \
-    --hash=sha256:fa5aff9036e9ef432d703abbdd801b436a249b6802e4df5ef74513e272434e57
+types-protobuf==6.30.2.20250822 \
+    --hash=sha256:5584c39f7e36104b5f8bdfd31815fa1d5b7b3455a79ddddc097b62320f4b1841 \
+    --hash=sha256:faacbbe87bd8cba4472361c0bd86f49296bd36f7761e25d8ada4f64767c1bde9
     # via -r ./packages/types-protobuf/requirements.in
