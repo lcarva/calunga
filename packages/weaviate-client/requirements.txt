@@ -411,9 +411,9 @@ validators==0.34.0 \
     --hash=sha256:647fe407b45af9a74d245b943b18e6a816acf4926974278f6dd617778e1e781f \
     --hash=sha256:c804b476e3e6d3786fa07a30073a4ef694e617805eb1946ceee3fe5a9b8b1321
     # via weaviate-client
-weaviate-client==4.15.4 \
-    --hash=sha256:005e7a6cee52ff4ac66f244a572b5ed98dd0e15bfda380979a88fddf692720df \
-    --hash=sha256:870b73495b8e5849003690f7c36f2795b90765e62482f07ab71275dbd21b271d
+weaviate-client==4.16.9 \
+    --hash=sha256:8b4adabaec0d513edef94c8c1de61c89a86eba3b63a4dc1acdfc9580e80199f4 \
+    --hash=sha256:d461071f1ff5ebddd0fc697959628a1d8caa12af1da071401ef25583c3084eba
     # via -r packages/weaviate-client/requirements.in
 
 # The following packages are considered to be unsafe in a requirements file:
