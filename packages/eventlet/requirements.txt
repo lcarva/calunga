@@ -8,9 +8,9 @@ dnspython==2.7.0 \
     --hash=sha256:b4c34b7d10b51bcc3a5071e7b8dee77939f1e878477eeecc965e9835f63c6c86 \
     --hash=sha256:ce9c432eda0dc91cf618a5cedf1a4e142651196bbcd2c80e89ed5a907e5cfaf1
     # via eventlet
-eventlet==0.40.1 \
-    --hash=sha256:378f36ac9b3f4d28f2e921fd8897ebc9797d017e34b96c259ac87c032d1c1bf3 \
-    --hash=sha256:aee74de74ac6634a1dac1ed58dc93b5dc2abaef3c7b5e76fd7f195f1662f25ef
+eventlet==0.40.3 \
+    --hash=sha256:290852db0065d78cec17a821b78c8a51cafb820a792796a354592ae4d5fceeb0 \
+    --hash=sha256:e681cae6ee956cfb066a966b5c0541e734cc14879bda6058024104790595ac9d
     # via -r packages/eventlet/requirements.in
 greenlet==3.2.3 \
     --hash=sha256:003c930e0e074db83559edc8705f3a2d066d4aa8c2f198aff1e454946efd0f26 \
