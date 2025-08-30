@@ -16,9 +16,9 @@ executing==2.2.0 \
     --hash=sha256:11387150cad388d62750327a53d3339fad4888b39a6fe233c3afbb54ecffd3aa \
     --hash=sha256:5d108c028108fe2551d1a7b2e8b713341e2cb4fc0aa7dcf966fa4327a5226755
     # via stack-data
-ipython==9.4.0 \
-    --hash=sha256:25850f025a446d9b359e8d296ba175a36aedd32e83ca9b5060430fe16801f066 \
-    --hash=sha256:c033c6d4e7914c3d9768aabe76bbe87ba1dc66a92a05db6bfa1125d81f2ee270
+ipython==9.5.0 \
+    --hash=sha256:129c44b941fe6d9b82d36fc7a7c18127ddb1d6f02f78f867f402e2e3adde3113 \
+    --hash=sha256:88369ffa1d5817d609120daa523a6da06d02518e582347c29f8451732a9c5e72
     # via -r packages/ipython/requirements.in
 ipython-pygments-lexers==1.1.1 \
     --hash=sha256:09c0138009e56b6854f9535736f4171d855c8c08a563a0dcd8022f78355c7e81 \
