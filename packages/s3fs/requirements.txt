@@ -463,9 +463,9 @@ python-dateutil==2.9.0.post0 \
     # via
     #   aiobotocore
     #   botocore
-s3fs==2025.5.1 \
-    --hash=sha256:7475e7c40a3a112f17144907ffae50782ab6c03487fe0b45a9c3942bb7a5c606 \
-    --hash=sha256:84beffa231b8ed94f8d667e93387b38351e1c4447aedea5c2c19dd88b7fcb658
+s3fs==2025.9.0 \
+    --hash=sha256:6d44257ef19ea64968d0720744c4af7a063a05f5c1be0e17ce943bef7302bc30 \
+    --hash=sha256:c33c93d48f66ed440dbaf6600be149cdf8beae4b6f8f0201a209c5801aeb7e30
     # via -r ./packages/s3fs/requirements.in
 six==1.17.0 \
     --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274 \
