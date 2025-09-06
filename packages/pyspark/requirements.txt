@@ -8,8 +8,8 @@ py4j==0.10.9.9 \
     --hash=sha256:c7c26e4158defb37b0bb124933163641a2ff6e3a3913f7811b0ddbe07ed61533 \
     --hash=sha256:f694cad19efa5bd1dee4f3e5270eb406613c974394035e5bfc4ec1aba870b879
     # via pyspark
-pyspark==4.0.0 \
-    --hash=sha256:38db1b4f6095a080d7605e578d775528990e66dc326311d93e94a71cfc24e5a5
+pyspark==4.0.1 \
+    --hash=sha256:9d1f22d994f60369228397e3479003ffe2dd736ba79165003246ff7bd48e2c73
     # via -r ./packages/pyspark/requirements.in
 
 # The following packages are considered to be unsafe in a requirements file:
