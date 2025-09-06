@@ -436,9 +436,9 @@ sqlalchemy==2.0.41 \
     # via
     #   alembic
     #   sqlalchemy-spanner
-sqlalchemy-spanner==1.14.0 \
-    --hash=sha256:1f632c90a761ca081adc09bfe0c8f06cfde12e4198bf17d234e25548e6fe3281 \
-    --hash=sha256:5e64c393c3cd2b618a14581f0d67b57cc16d557cc57d5c6da07a1b6f9d035bc8
+sqlalchemy-spanner==1.16.0 \
+    --hash=sha256:5143d5d092f2f1fef66b332163291dc7913a58292580733a601ff5fae160515a \
+    --hash=sha256:e53cadb2b973e88936c0a9874e133ee9a0829ea3261f328b4ca40bdedf2016c1
     # via -r ./packages/sqlalchemy-spanner/requirements.in
 sqlparse==0.5.3 \
     --hash=sha256:09f67787f56a0b16ecdbde1bfc7f5d9c3371ca683cfeaa8e6ff60b4807ec9272 \
