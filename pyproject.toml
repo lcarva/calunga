@@ -17,7 +17,7 @@ pip-tools = "^7.0.0"
 pybuild-deps = {git = "https://github.com/lcarva/pybuild-deps.git", branch = "handle-no-resolver"}
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.0.0"
+pytest = "^8.0.0"
 pytest-cov = "^4.0.0"
 black = "^23.0.0"
 isort = "^5.0.0"
