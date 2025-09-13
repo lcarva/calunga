@@ -12,9 +12,9 @@ elastic-transport==8.17.1 \
     --hash=sha256:192718f498f1d10c5e9aa8b9cf32aed405e469a7f0e9d6a8923431dbb2c59fb8 \
     --hash=sha256:5edef32ac864dca8e2f0a613ef63491ee8d6b8cfb52881fa7313ba9290cac6d2
     # via elasticsearch
-elasticsearch==9.0.2 \
-    --hash=sha256:290e790153500d9f3cb66d74918ac70e9f96b5cd88147213859edca6ab5013f5 \
-    --hash=sha256:47cac1f0e5e7be8d8c6751a5d7818d416adfc11eac72f1b59e145930a87de880
+elasticsearch==9.1.1 \
+    --hash=sha256:2a5c27c57ca3dd3365f665c82c9dcd8666ccfb550d5b07c688c21ec636c104e5 \
+    --hash=sha256:be20acda2a97591a9a6cf4981fc398ee6fca3291cf9e7a9e52b6a9f41a46d393
     # via -r ./packages/elasticsearch/requirements.in
 python-dateutil==2.9.0.post0 \
     --hash=sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3 \
