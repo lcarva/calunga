@@ -101,7 +101,7 @@ greenlet==3.2.3 \
     --hash=sha256:efc6dc8a792243c31f2f5674b670b3a95d46fa1c6a912b8e310d6f542e7b0712 \
     --hash=sha256:f4bfbaa6096b1b7a200024784217defedf46a07c2eee1a498e94a1b5f8ec5728
     # via gevent
-zope-event==5.1 \
+zope-event==6.0 \
     --hash=sha256:53de8f0e9f61dc0598141ac591f49b042b6d74784dab49971b9cc91d0f73a7df \
     --hash=sha256:a153660e0c228124655748e990396b9d8295d6e4f546fa1b34f3319e1c666e7f
     # via gevent
@@ -152,3 +152,6 @@ setuptools==80.9.0 \
     # via
     #   zope-event
     #   zope-interface
+zope.event==6.0 \
+    --hash=sha256:0ebac894fa7c5f8b7a89141c272133d8c1de6ddc75ea4b1f327f00d1f890df92 \
+    --hash=sha256:6f0922593407cc673e7d8766b492c519f91bdc99f3080fe43dcec0a800d682a3
