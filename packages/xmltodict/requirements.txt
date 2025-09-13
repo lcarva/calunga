@@ -4,9 +4,9 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=packages/xmltodict/requirements.txt packages/xmltodict/requirements.in
 #
-xmltodict==0.14.2 \
-    --hash=sha256:201e7c28bb210e374999d1dde6382923ab0ed1a8a5faeece48ab525b7810a553 \
-    --hash=sha256:20cc7d723ed729276e808f26fb6b3599f786cbc37e06c65e192ba77c40f20aac
+xmltodict==1.0.0 \
+    --hash=sha256:64316adb5e30ca21ad5cf391f4f0f6b34f673d96b79574f1db1e32b13b43ee34 \
+    --hash=sha256:f50eb9020d28c673b40bbe3f43458ee165f0267c67f8ad8df0d70d9a4f3ac824
     # via -r packages/xmltodict/requirements.in
 
 # The following packages are considered to be unsafe in a requirements file:
