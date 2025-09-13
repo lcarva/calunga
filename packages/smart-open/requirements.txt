@@ -4,9 +4,9 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=./packages/smart-open/requirements.txt ./packages/smart-open/requirements.in
 #
-smart-open==7.3.0.post1 \
-    --hash=sha256:c73661a2c24bf045c1e04e08fffc585b59af023fe783d57896f590489db66fb4 \
-    --hash=sha256:ce6a3d9bc1afbf6234ad13c010b77f8cd36d24636811e3c52c3b5160f5214d1e
+smart-open==7.3.1 \
+    --hash=sha256:b33fee8dffd206f189d5e704106a8723afb4210d2ff47e0e1f7fbe436187a990 \
+    --hash=sha256:e243b2e7f69d6c0c96dd763d6fbbedbb4e0e4fc6d74aa007acc5b018d523858c
     # via -r ./packages/smart-open/requirements.in
 wrapt==1.17.2 \
     --hash=sha256:08e7ce672e35efa54c5024936e559469436f8b8096253404faeb54d2a878416f \
