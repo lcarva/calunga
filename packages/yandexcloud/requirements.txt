@@ -447,9 +447,9 @@ wrapt==1.17.2 \
     --hash=sha256:fc78a84e2dfbc27afe4b2bd7c80c8db9bca75cc5b85df52bfe634596a1da846b \
     --hash=sha256:ff04ef6eec3eee8a5efef2401495967a916feaa353643defcc03fc74fe213b58
     # via deprecated
-yandexcloud==0.350.0 \
-    --hash=sha256:105dcd2820b93497022f36081b1807c47a8764c929c40ec86c6c01f1431cabe5 \
-    --hash=sha256:ecfe5ed2cd6bdfa2d36d0890ed628dbcf546de978442743248969d4563e83dc5
+yandexcloud==0.359.0 \
+    --hash=sha256:921e0675424037f9ad7ae0b344f08d7cece83af9fc4d6a7a6b0721c92933419e \
+    --hash=sha256:b096b8ead1de323ce9562f7a79fea34280b48f59b51ca945a6fca97df966ca10
     # via -r ./packages/yandexcloud/requirements.in
 
 # The following packages are considered to be unsafe in a requirements file:
