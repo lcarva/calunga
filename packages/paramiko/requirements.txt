@@ -171,9 +171,9 @@ paramiko==3.5.1 \
     --hash=sha256:43b9a0501fc2b5e70680388d9346cf252cfb7d00b0667c39e80eb43a408b8f61 \
     --hash=sha256:b2c665bc45b2b215bd7d7f039901b14b067da00f3a11e6640995fd58f2664822
     # via -r packages/paramiko/requirements.in
-pycparser==2.22 \
-    --hash=sha256:491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6 \
-    --hash=sha256:c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc
+pycparser==2.23 \
+    --hash=sha256:78816d4f24add8f10a06d6f05b4d424ad9e96cfebf68a4ddc99c65c0720d00c2 \
+    --hash=sha256:e5c6e8d3fbad53479cab09ac03729e0a9faf2bee3db8208a550daf5af81a5934
     # via cffi
 pynacl==1.5.0 \
     --hash=sha256:06b8f6fa7f5de8d5d2f7573fe8c863c051225a27b61e6860fd047b1775807858 \

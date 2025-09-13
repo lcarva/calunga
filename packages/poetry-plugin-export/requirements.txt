@@ -447,9 +447,9 @@ poetry-plugin-export==1.9.0 \
     --hash=sha256:6fc8755cfac93c74752f85510b171983e2e47d782d4ab5be4ffc4f6945be7967 \
     --hash=sha256:e2621dd8c260dd705a8227f076075246a7ff5c697e18ddb90ff68081f47ee642
     # via -r packages/poetry-plugin-export/requirements.in
-pycparser==2.22 \
-    --hash=sha256:491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6 \
-    --hash=sha256:c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc
+pycparser==2.23 \
+    --hash=sha256:78816d4f24add8f10a06d6f05b4d424ad9e96cfebf68a4ddc99c65c0720d00c2 \
+    --hash=sha256:e5c6e8d3fbad53479cab09ac03729e0a9faf2bee3db8208a550daf5af81a5934
     # via cffi
 pyproject-hooks==1.2.0 \
     --hash=sha256:1e859bd5c40fae9448642dd871adf459e5e2084186e8d2c2a79a824c970da1f8 \
