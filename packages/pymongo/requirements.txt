@@ -4,9 +4,9 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=./packages/pymongo/requirements.txt ./packages/pymongo/requirements.in
 #
-dnspython==2.7.0 \
-    --hash=sha256:b4c34b7d10b51bcc3a5071e7b8dee77939f1e878477eeecc965e9835f63c6c86 \
-    --hash=sha256:ce9c432eda0dc91cf618a5cedf1a4e142651196bbcd2c80e89ed5a907e5cfaf1
+dnspython==2.8.0 \
+    --hash=sha256:01d9bbc4a2d76bf0db7c1f729812ded6d912bd318d3b1cf81d30c0f845dbf3af \
+    --hash=sha256:181d3c6996452cb1189c4046c61599b84a5a86e099562ffde77d26984ff26d0f
     # via pymongo
 pymongo==4.13.2 \
     --hash=sha256:01065eb1838e3621a30045ab14d1a60ee62e01f65b7cf154e69c5c722ef14d2f \
