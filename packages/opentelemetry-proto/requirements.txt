@@ -4,9 +4,9 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=packages/opentelemetry-proto/requirements.txt packages/opentelemetry-proto/requirements.in
 #
-opentelemetry-proto==1.35.0 \
-    --hash=sha256:532497341bd3e1c074def7c5b00172601b28bb83b48afc41a4b779f26eb4ee05 \
-    --hash=sha256:98fffa803164499f562718384e703be8d7dfbe680192279a0429cb150a2f8809
+opentelemetry-proto==1.37.0 \
+    --hash=sha256:30f5c494faf66f77faeaefa35ed4443c5edb3b0aa46dad073ed7210e1a789538 \
+    --hash=sha256:8ed8c066ae8828bbf0c39229979bdf583a126981142378a9cbe9d6fd5701c6e2
     # via -r packages/opentelemetry-proto/requirements.in
 protobuf==6.31.1 \
     --hash=sha256:0414e3aa5a5f3ff423828e1e6a6e907d6c65c1d5b7e6e975793d5590bdeecc16 \
