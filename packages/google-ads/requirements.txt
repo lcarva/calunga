@@ -106,9 +106,9 @@ charset-normalizer==3.4.2 \
     --hash=sha256:fcbe676a55d7445b22c10967bceaaf0ee69407fbe0ece4d032b6eb8d4565982a \
     --hash=sha256:fdb20a30fe1175ecabed17cbf7812f7b804b8a315a25f24678bcdf120a90077f
     # via requests
-google-ads==27.0.0 \
-    --hash=sha256:4c8c9570b49b57fa1e90c7f90f2a9c6d399ae0ebd05f3a8dd8de4593a2f446ae \
-    --hash=sha256:c6c6265f2e5d91caac6426bdae2a17bd104f38cafff21b1e2def01a994bc0131
+google-ads==28.0.0.post2 \
+    --hash=sha256:5e9435bfc02d5d3fd2521a13bee2ac175233cf556abb9bea78e51c7e81eef9e9 \
+    --hash=sha256:a31e9ad85408b071ed70b1de628c1d0f164ad30266a824adbcd2a287150bd977
     # via -r ./packages/google-ads/requirements.in
 google-api-core==2.25.1 \
     --hash=sha256:8a2a56c1fef82987a524371f99f3bd0143702fecc670c72e600c1cda6bf8dbb7 \
