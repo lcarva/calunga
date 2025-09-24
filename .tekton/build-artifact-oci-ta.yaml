@@ -113,7 +113,7 @@ spec:
           readOnly: true
           subPath: ca-bundle.crt
     - name: run-script
-      image: quay.io/konflux-ci/buildah-task:latest@sha256:b82d465a06c926882d02b721cf8a8476048711332749f39926a01089cf85a3f9
+      image: quay.io/konflux-ci/buildah-task:latest@sha256:27400eaf836985bcc35182d62d727629f061538f61603c05b85d5d99bfa7da2d
       workingDir: /var/workdir
       volumeMounts:
         - mountPath: /mnt/trusted-ca
