@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=packages/lxml/requirements.txt packages/lxml/requirements.in
 #
-lxml==6.0.0 \
+lxml==6.0.2 \
     --hash=sha256:013090383863b72c62a702d07678b658fa2567aa58d373d963cca245b017e065 \
     --hash=sha256:032e65120339d44cdc3efc326c9f660f5f7205f3a535c1fdbf898b29ea01fb72 \
     --hash=sha256:048a930eb4572829604982e39a0c7289ab5dc8abc7fc9f5aabd6fbc08c154e93 \
