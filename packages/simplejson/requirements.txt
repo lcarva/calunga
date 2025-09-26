@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=./packages/simplejson/requirements.txt ./packages/simplejson/requirements.in
 #
-simplejson==3.20.1 \
+simplejson==3.20.2 \
     --hash=sha256:000602141d0bddfcff60ea6a6e97d5e10c9db6b17fd2d6c66199fa481b6214bb \
     --hash=sha256:03d7a426e416fe0d3337115f04164cd9427eb4256e843a6b8751cacf70abc832 \
     --hash=sha256:03db8cb64154189a92a7786209f24e391644f3a3fa335658be2df2af1960b8d8 \
