@@ -317,7 +317,7 @@ packaging==25.0 \
     #   db-dtypes
     #   google-cloud-bigquery
     #   pandas-gbq
-pandas==2.3.1 \
+pandas==2.3.3 \
     --hash=sha256:025e92411c16cbe5bb2a4abc99732a6b132f439b8aab23a59fa593eb00704232 \
     --hash=sha256:09e3b1587f0f3b0913e21e8b32c3119174551deb4a4eba4a89bc7377947977e7 \
     --hash=sha256:0a95b9ac964fe83ce317827f80304d37388ea77616b1425f0ae41c9d2d0d7bb2 \
