@@ -57,7 +57,7 @@ setuptools-scm==8.3.1 \
     --hash=sha256:332ca0d43791b818b841213e76b1971b7711a960761c5bea5fc5cdb5196fbce3 \
     --hash=sha256:3d555e92b75dacd037d32bafdf94f97af51ea29ae8c7b234cf94b7a5bd242a63
     # via charset-normalizer
-types-psutil==7.0.0.20250601 \
+types-psutil==7.0.0.20251001 \
     --hash=sha256:0c372e2d1b6529938a080a6ba4a9358e3dfc8526d82fabf40c1ef9325e4ca52e \
     --hash=sha256:71fe9c4477a7e3d4f1233862f0877af87bff057ff398f04f4e5c0ca60aded197
     # via mypy

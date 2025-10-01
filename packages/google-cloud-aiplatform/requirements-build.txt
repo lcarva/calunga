@@ -621,7 +621,7 @@ twine==6.1.0 \
     --hash=sha256:a47f973caf122930bf0fbbf17f80b83bc1602c9ce393c7845f289a3001dc5384 \
     --hash=sha256:be324f6272eff91d07ee93f251edf232fc647935dd585ac003539b42404a8dbd
     # via google-genai
-types-psutil==7.0.0.20250601 \
+types-psutil==7.0.0.20251001 \
     --hash=sha256:0c372e2d1b6529938a080a6ba4a9358e3dfc8526d82fabf40c1ef9325e4ca52e \
     --hash=sha256:71fe9c4477a7e3d4f1233862f0877af87bff057ff398f04f4e5c0ca60aded197
     # via mypy
