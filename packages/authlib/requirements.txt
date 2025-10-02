@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=./packages/authlib/requirements.txt ./packages/authlib/requirements.in
 #
-authlib==1.6.0 \
+authlib==1.6.5 \
     --hash=sha256:4367d32031b7af175ad3a323d571dc7257b7099d55978087ceae4a0d88cd3210 \
     --hash=sha256:91685589498f79e8655e8a8947431ad6288831d643f11c55c2143ffcc738048d
     # via -r ./packages/authlib/requirements.in

@@ -12,7 +12,7 @@ anyio==4.9.0 \
     --hash=sha256:673c0c244e15788651a4ff38710fea9675823028a6f08a5eda409e0c9840a028 \
     --hash=sha256:9f76d541cad6e36af7beb62e978876f3b41e3e04f2c1fbf0884604c0a9c4d93c
     # via httpx
-authlib==1.6.0 \
+authlib==1.6.5 \
     --hash=sha256:4367d32031b7af175ad3a323d571dc7257b7099d55978087ceae4a0d88cd3210 \
     --hash=sha256:91685589498f79e8655e8a8947431ad6288831d643f11c55c2143ffcc738048d
     # via weaviate-client
