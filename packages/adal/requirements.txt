@@ -8,7 +8,7 @@ adal==1.2.7 \
     --hash=sha256:2a7451ed7441ddbc57703042204a3e30ef747478eea022c70f789fc7f084bc3d \
     --hash=sha256:d74f45b81317454d96e982fd1c50e6fb5c99ac2223728aea8764433a39f566f1
     # via -r packages/adal/requirements.in
-certifi==2025.7.14 \
+certifi==2025.10.5 \
     --hash=sha256:6b31f564a415d79ee77df69d757bb49a5bb53bd9f756cbbe24394ffd6fc1f4b2 \
     --hash=sha256:8ea99dbdfaaf2ba2f9bac77b9249ef62ec5218e7c2b2e903378ed5fccf765995
     # via requests

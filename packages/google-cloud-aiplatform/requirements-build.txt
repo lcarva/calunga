@@ -8,7 +8,7 @@ calver==2025.4.17 \
     --hash=sha256:460702737d620f5c3d4175450485180a1b7f7a422c5db0e6af3e655c7395ec7e \
     --hash=sha256:82f0efe7f71c28167af5ed9712e0d9d6272eb0817acbbf852b8b2404666a0cf2
     # via trove-classifiers
-certifi==2025.7.14 \
+certifi==2025.10.5 \
     --hash=sha256:6b31f564a415d79ee77df69d757bb49a5bb53bd9f756cbbe24394ffd6fc1f4b2 \
     --hash=sha256:8ea99dbdfaaf2ba2f9bac77b9249ef62ec5218e7c2b2e903378ed5fccf765995
     # via requests
