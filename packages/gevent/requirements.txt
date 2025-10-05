@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=packages/gevent/requirements.txt packages/gevent/requirements.in
 #
-gevent==25.5.1 \
+gevent==25.9.1 \
     --hash=sha256:017a7384c0cd1a5907751c991535a0699596e89725468a7fc39228312e10efa1 \
     --hash=sha256:0bacf89a65489d26c7087669af89938d5bfd9f7afb12a07b57855b9fad6ccbd0 \
     --hash=sha256:12380aba5c316e9ff53cc21d8ab80f4a91c0df3ada58f65d4f5eb2cf693db00e \
