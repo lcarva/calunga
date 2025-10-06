@@ -68,7 +68,7 @@ cython==3.1.2 \
     --hash=sha256:f6e7188df8709be32cfdfadc7c3782e361c929df9132f95e1bbc90a340dca3c7 \
     --hash=sha256:fe7f1ee4c13f8a773bd6c66b3d25879f40596faeab49f97d28c39b16ace5fff9
     # via -r ./packages/frozenlist/requirements.in
-frozenlist==1.7.0 \
+frozenlist==1.8.0 \
     --hash=sha256:04fb24d104f425da3540ed83cbfc31388a586a7696142004c577fa61c6298c3f \
     --hash=sha256:05579bf020096fe05a764f1f84cd104a12f78eaab68842d036772dc6d4870b4b \
     --hash=sha256:0aa7e176ebe115379b5b1c95b4096fb1c17cce0847402e227e712c27bdb5a949 \

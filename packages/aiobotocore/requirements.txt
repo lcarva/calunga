@@ -116,7 +116,7 @@ botocore==1.38.46 \
     --hash=sha256:8798e5a418c27cf93195b077153644aea44cb171fcd56edc1ecebaa1e49e226e \
     --hash=sha256:89ca782ffbf2e8769ca9c89234cfa5ca577f1987d07d913ee3c68c4776b1eb5b
     # via aiobotocore
-frozenlist==1.7.0 \
+frozenlist==1.8.0 \
     --hash=sha256:04fb24d104f425da3540ed83cbfc31388a586a7696142004c577fa61c6298c3f \
     --hash=sha256:05579bf020096fe05a764f1f84cd104a12f78eaab68842d036772dc6d4870b4b \
     --hash=sha256:0aa7e176ebe115379b5b1c95b4096fb1c17cce0847402e227e712c27bdb5a949 \
