@@ -121,7 +121,7 @@ google-auth==2.40.3 \
     #   google-cloud-bigquery
     #   google-cloud-core
     #   sqlalchemy-bigquery
-google-cloud-bigquery==3.34.0 \
+google-cloud-bigquery==3.38.0 \
     --hash=sha256:5ee1a78ba5c2ccb9f9a8b2bf3ed76b378ea68f49b6cac0544dc55cc97ff7c1ce \
     --hash=sha256:de20ded0680f8136d92ff5256270b5920dfe4fae479f5d0f73e90e5df30b1cf7
     # via sqlalchemy-bigquery
