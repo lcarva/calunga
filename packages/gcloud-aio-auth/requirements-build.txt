@@ -108,7 +108,7 @@ hatchling==1.27.0 \
     #   expandvars
     #   hatch-fancy-pypi-readme
     #   hatch-vcs
-maturin==1.9.1 \
+maturin==1.9.6 \
     --hash=sha256:0e6e2ddc83999ac3999576b06649a327536a51d57c917fa01416e40f53106bda \
     --hash=sha256:2f05f07bc887e010c44d32a088aea4f36a2104e301f51f408481e4e9759471a7 \
     --hash=sha256:69d9f752f33a3c95062014f464cbd715e83a175f4601b76a9ce3db6ea18df976 \
