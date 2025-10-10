@@ -4,7 +4,7 @@
 #
 #    pip-compile --generate-hashes --output-file=./packages/aiobotocore/requirements.txt ./packages/aiobotocore/requirements.in
 #
-aiobotocore==2.23.0 \
+aiobotocore==2.25.0 \
     --hash=sha256:0333931365a6c7053aee292fe6ef50c74690c4ae06bb019afdf706cb6f2f5e32 \
     --hash=sha256:8202cebbf147804a083a02bc282fbfda873bfdd0065fd34b64784acb7757b66e
     # via -r ./packages/aiobotocore/requirements.in
