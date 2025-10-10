@@ -200,7 +200,7 @@ langchain==0.3.26 \
     --hash=sha256:361bb2e61371024a8c473da9f9c55f4ee50f269c5ab43afdb2b1309cb7ac36cf \
     --hash=sha256:8ff034ee0556d3e45eff1f1e96d0d745ced57858414dba7171c8ebdbeb5580c9
     # via -r packages/langchain/requirements.in
-langchain-core==0.3.68 \
+langchain-core==0.3.79 \
     --hash=sha256:312e1932ac9aa2eaf111b70fdc171776fa571d1a86c1f873dcac88a094b19c6f \
     --hash=sha256:5e5c1fbef419590537c91b8c2d86af896fbcbaf0d5ed7fdcdd77f7d8f3467ba0
     # via
