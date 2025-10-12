@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=./packages/fastavro/requirements.txt ./packages/fastavro/requirements.in
 #
-fastavro==1.11.1 \
+fastavro==1.12.1 \
     --hash=sha256:0253e5b6a3c9b62fae9fc3abd8184c5b64a833322b6af7d666d3db266ad879b5 \
     --hash=sha256:059893df63ef823b0231b485c9d43016c7e32850cae7bf69f4e9d46dd41c28f2 \
     --hash=sha256:1bc2824e9969c04ab6263d269a1e0e5d40b9bd16ade6b70c29d6ffbc4f3cc102 \
