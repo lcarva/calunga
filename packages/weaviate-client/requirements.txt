@@ -134,7 +134,7 @@ deprecation==2.1.0 \
     --hash=sha256:72b3bde64e5d778694b0cf68178aed03d15e15477116add3fb773e581f9518ff \
     --hash=sha256:a10811591210e1fb0e768a8c25517cabeabcba6f0bf96564f8ff45189f90b14a
     # via weaviate-client
-grpcio==1.73.1 \
+grpcio==1.75.1 \
     --hash=sha256:052e28fe9c41357da42250a91926a3e2f74c046575c070b69659467ca5aa976b \
     --hash=sha256:07f08705a5505c9b5b0cbcbabafb96462b5a15b7236bbf6bbcc6b0b91e1cbd7e \
     --hash=sha256:0a9f3ea8dce9eae9d7cb36827200133a72b37a63896e0e61a9d5ec7d61a59ab1 \
