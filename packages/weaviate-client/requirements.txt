@@ -190,7 +190,7 @@ grpcio==1.73.1 \
     #   grpcio-health-checking
     #   grpcio-tools
     #   weaviate-client
-grpcio-health-checking==1.73.1 \
+grpcio-health-checking==1.75.1 \
     --hash=sha256:352753713edeba3f23ea8a3320c5752bee186002d9475a654f5f815ff4e06345 \
     --hash=sha256:d5fa49c3a2d67d7622690ddf6677a429264f35d1b2ef80bf58e3ffe88a1154c0
     # via weaviate-client

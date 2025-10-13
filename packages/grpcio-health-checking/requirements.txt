@@ -57,7 +57,7 @@ grpcio==1.73.1 \
     --hash=sha256:f43ffb3bd415c57224c7427bfb9e6c46a0b6e998754bfa0d00f408e1873dcbb5 \
     --hash=sha256:f48e862aed925ae987eb7084409a80985de75243389dc9d9c271dd711e589918
     # via grpcio-health-checking
-grpcio-health-checking==1.73.1 \
+grpcio-health-checking==1.75.1 \
     --hash=sha256:352753713edeba3f23ea8a3320c5752bee186002d9475a654f5f815ff4e06345 \
     --hash=sha256:d5fa49c3a2d67d7622690ddf6677a429264f35d1b2ef80bf58e3ffe88a1154c0
     # via -r ./packages/grpcio-health-checking/requirements.in
