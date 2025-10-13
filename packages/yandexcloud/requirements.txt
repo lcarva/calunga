@@ -218,7 +218,7 @@ googleapis-common-protos==1.70.0 \
     --hash=sha256:0e1b44e0ea153e6594f9f394fef15193a68aaaea2d843f83e2742717ca753257 \
     --hash=sha256:b8bfcca8c25a2bb253e0e0b0adaf8c00773e5e6af6fd92397576680b807e0fd8
     # via yandexcloud
-grpcio==1.73.1 \
+grpcio==1.75.1 \
     --hash=sha256:052e28fe9c41357da42250a91926a3e2f74c046575c070b69659467ca5aa976b \
     --hash=sha256:07f08705a5505c9b5b0cbcbabafb96462b5a15b7236bbf6bbcc6b0b91e1cbd7e \
     --hash=sha256:0a9f3ea8dce9eae9d7cb36827200133a72b37a63896e0e61a9d5ec7d61a59ab1 \

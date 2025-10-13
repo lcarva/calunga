@@ -231,7 +231,7 @@ greenlet==3.2.3 \
     --hash=sha256:efc6dc8a792243c31f2f5674b670b3a95d46fa1c6a912b8e310d6f542e7b0712 \
     --hash=sha256:f4bfbaa6096b1b7a200024784217defedf46a07c2eee1a498e94a1b5f8ec5728
     # via sqlalchemy
-grpcio==1.73.1 \
+grpcio==1.75.1 \
     --hash=sha256:052e28fe9c41357da42250a91926a3e2f74c046575c070b69659467ca5aa976b \
     --hash=sha256:07f08705a5505c9b5b0cbcbabafb96462b5a15b7236bbf6bbcc6b0b91e1cbd7e \
     --hash=sha256:0a9f3ea8dce9eae9d7cb36827200133a72b37a63896e0e61a9d5ec7d61a59ab1 \
