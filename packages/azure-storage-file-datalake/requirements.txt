@@ -4,17 +4,17 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=./packages/azure-storage-file-datalake/requirements.txt ./packages/azure-storage-file-datalake/requirements.in
 #
-azure-core==1.35.0 \
+azure-core==1.36.0 \
     --hash=sha256:8db78c72868a58f3de8991eb4d22c4d368fae226dac1002998d6c50437e7dad1 \
     --hash=sha256:c0be528489485e9ede59b6971eb63c1eaacf83ef53001bfe3904e475e972be5c
     # via
     #   azure-storage-blob
     #   azure-storage-file-datalake
-azure-storage-blob==12.25.1 \
+azure-storage-blob==12.27.0 \
     --hash=sha256:1f337aab12e918ec3f1b638baada97550673911c4ceed892acc8e4e891b74167 \
     --hash=sha256:4f294ddc9bc47909ac66b8934bd26b50d2000278b10ad82cc109764fdc6e0e3b
     # via azure-storage-file-datalake
-azure-storage-file-datalake==12.20.0 \
+azure-storage-file-datalake==12.22.0 \
     --hash=sha256:8d6932b75470de935998755d980a3296412d8ff2a11631c1d99267ae65f11f03 \
     --hash=sha256:d32af627ccf7f8523ac4520a4004291b8ca340d7c607545366e1b08822afa01b
     # via -r ./packages/azure-storage-file-datalake/requirements.in

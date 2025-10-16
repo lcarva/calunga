@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=./packages/azure-core/requirements.txt ./packages/azure-core/requirements.in
 #
-azure-core==1.35.0 \
+azure-core==1.36.0 \
     --hash=sha256:8db78c72868a58f3de8991eb4d22c4d368fae226dac1002998d6c50437e7dad1 \
     --hash=sha256:c0be528489485e9ede59b6971eb63c1eaacf83ef53001bfe3904e475e972be5c
     # via -r ./packages/azure-core/requirements.in
