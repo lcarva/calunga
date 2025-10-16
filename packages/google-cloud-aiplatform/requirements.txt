@@ -304,7 +304,7 @@ idna==3.10 \
     #   anyio
     #   httpx
     #   requests
-numpy==2.3.1 \
+numpy==2.3.4 \
     --hash=sha256:0025048b3c1557a20bc80d06fdeb8cc7fc193721484cca82b2cfa072fec71a93 \
     --hash=sha256:010ce9b4f00d5c036053ca684c77441f2f2c934fd23bee058b4d6f196efd8280 \
     --hash=sha256:0bb3a4a61e1d327e035275d2a993c96fa786e4913aa089843e6a2d9dd205c66a \
