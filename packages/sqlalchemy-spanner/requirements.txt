@@ -193,7 +193,7 @@ greenlet==3.2.3 \
     --hash=sha256:efc6dc8a792243c31f2f5674b670b3a95d46fa1c6a912b8e310d6f542e7b0712 \
     --hash=sha256:f4bfbaa6096b1b7a200024784217defedf46a07c2eee1a498e94a1b5f8ec5728
     # via sqlalchemy
-grpc-google-iam-v1==0.14.2 \
+grpc-google-iam-v1==0.14.3 \
     --hash=sha256:a3171468459770907926d56a440b2bb643eec1d7ba215f48f3ecece42b4d8351 \
     --hash=sha256:b3e1fc387a1a329e41672197d0ace9de22c78dd7d215048c4c78712073f7bd20
     # via google-cloud-spanner
