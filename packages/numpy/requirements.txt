@@ -52,7 +52,7 @@ ninja==1.11.1.4 \
     --hash=sha256:ecce44a00325a93631792974659cf253a815cc6da4ec96f89742925dfc295a0d \
     --hash=sha256:f6186d7607bb090c3be1e10c8a56b690be238f953616626f5032238c66e56867
     # via -r ./packages/numpy/requirements.in
-numpy==2.3.1 \
+numpy==2.3.4 \
     --hash=sha256:0025048b3c1557a20bc80d06fdeb8cc7fc193721484cca82b2cfa072fec71a93 \
     --hash=sha256:010ce9b4f00d5c036053ca684c77441f2f2c934fd23bee058b4d6f196efd8280 \
     --hash=sha256:0bb3a4a61e1d327e035275d2a993c96fa786e4913aa089843e6a2d9dd205c66a \

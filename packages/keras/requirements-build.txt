@@ -99,7 +99,7 @@ meson==1.8.2 \
     --hash=sha256:274b49dbe26e00c9a591442dd30f4ae9da8ce11ce53d0f4682cd10a45d50f6fd \
     --hash=sha256:c105816d8158c76b72adcb9ff60297719096da7d07f6b1f000fd8c013cd387af
     # via meson-python
-numpy==2.3.1 \
+numpy==2.3.4 \
     --hash=sha256:0025048b3c1557a20bc80d06fdeb8cc7fc193721484cca82b2cfa072fec71a93 \
     --hash=sha256:010ce9b4f00d5c036053ca684c77441f2f2c934fd23bee058b4d6f196efd8280 \
     --hash=sha256:0bb3a4a61e1d327e035275d2a993c96fa786e4913aa089843e6a2d9dd205c66a \
