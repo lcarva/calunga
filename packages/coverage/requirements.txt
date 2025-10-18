@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=./packages/coverage/requirements.txt ./packages/coverage/requirements.in
 #
-coverage==7.9.2 \
+coverage==7.11.0 \
     --hash=sha256:0a07757de9feb1dfafd16ab651e0f628fd7ce551604d1bf23e47e1ddca93f08a \
     --hash=sha256:0a17eaf46f56ae0f870f14a3cbc2e4632fe3771eab7f687eda1ee59b73d09fe4 \
     --hash=sha256:0b4a4cb73b9f2b891c1788711408ef9707666501ba23684387277ededab1097c \
