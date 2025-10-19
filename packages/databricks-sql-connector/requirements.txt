@@ -102,7 +102,7 @@ charset-normalizer==3.4.2 \
     --hash=sha256:fcbe676a55d7445b22c10967bceaaf0ee69407fbe0ece4d032b6eb8d4565982a \
     --hash=sha256:fdb20a30fe1175ecabed17cbf7812f7b804b8a315a25f24678bcdf120a90077f
     # via requests
-databricks-sql-connector==4.0.5 \
+databricks-sql-connector==4.1.4 \
     --hash=sha256:8df9b0288f18ec699e2980319983c43080fe0a9a540261d26c37e63b2cb44b58 \
     --hash=sha256:ade3143b3b55e8c236bea7da8579c63c43432dd07df9dc05b1d8f2f7bbeb144e
     # via -r ./packages/databricks-sql-connector/requirements.in
