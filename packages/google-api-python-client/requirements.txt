@@ -110,7 +110,7 @@ google-api-core==2.25.1 \
     --hash=sha256:8a2a56c1fef82987a524371f99f3bd0143702fecc670c72e600c1cda6bf8dbb7 \
     --hash=sha256:d2aaa0b13c78c61cb3f4282c464c046e45fbd75755683c9c525e6e8f7ed0a5e8
     # via google-api-python-client
-google-api-python-client==2.176.0 \
+google-api-python-client==2.185.0 \
     --hash=sha256:2b451cdd7fd10faeb5dd20f7d992f185e1e8f4124c35f2cdcc77c843139a4cf1 \
     --hash=sha256:e22239797f1d085341e12cd924591fc65c56d08e0af02549d7606092e6296510
     # via -r ./packages/google-api-python-client/requirements.in
