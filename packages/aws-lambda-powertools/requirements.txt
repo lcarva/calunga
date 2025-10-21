@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=packages/aws-lambda-powertools/requirements.txt packages/aws-lambda-powertools/requirements.in
 #
-aws-lambda-powertools==3.16.0 \
+aws-lambda-powertools==3.22.0 \
     --hash=sha256:b37843d4873b88fedd8eed507fdbf3eb7193e48a6b662b1e7b41e741cdcc765b \
     --hash=sha256:df0e5b6e575bf8fd30101d3c39358deb3ccbed195756343e44af34d05345f128
     # via -r packages/aws-lambda-powertools/requirements.in
