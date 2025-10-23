@@ -4,7 +4,7 @@
 #
 #    pip-compile --generate-hashes --output-file=./packages/pandas/requirements.txt ./packages/pandas/requirements.in
 #
-cmake==4.0.3 \
+cmake==4.1.2 \
     --hash=sha256:004e58b1a1a384c2ca799c9c41ac4ed86ac3b80129462992c43c1121f8729ffd \
     --hash=sha256:04c40c92fdcaa96c66a5731b5b3fbbdf87da99cc68fdd30ff30b90c34d222986 \
     --hash=sha256:133dbc33f995cb97a4456d83d67fa0a7a798f53f979454359140588baa928f43 \
