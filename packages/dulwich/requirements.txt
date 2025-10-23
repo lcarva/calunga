@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=packages/dulwich/requirements.txt packages/dulwich/requirements.in
 #
-dulwich==0.23.2 \
+dulwich==0.24.7 \
     --hash=sha256:042b0ab903e17abbc6687677f78ae38b7dbf43b86fe1d73adc20ae7bb1fbabf7 \
     --hash=sha256:0b0439d309cf808f7955f74776981d9ac9dc1ec715aa39798de9b22bb95ac163 \
     --hash=sha256:135791b753a14e9cff98b7525b1dc60dd36d10fb1a3a113089f8ddb6e2828446 \
