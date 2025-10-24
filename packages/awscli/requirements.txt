@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=./packages/awscli/requirements.txt ./packages/awscli/requirements.in
 #
-awscli==1.41.4 \
+awscli==1.42.59 \
     --hash=sha256:4f2a0169566c59bacedc133febc0e7521fdec1a20af806e3e2a701cb98257d99 \
     --hash=sha256:a385d8ae83eb3816147e29beb8fa5a88543322e9194048b0ec74031f044cbb1a
     # via -r ./packages/awscli/requirements.in
