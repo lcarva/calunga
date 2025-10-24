@@ -144,7 +144,7 @@ langchain-core==0.3.68 \
     --hash=sha256:312e1932ac9aa2eaf111b70fdc171776fa571d1a86c1f873dcac88a094b19c6f \
     --hash=sha256:5e5c1fbef419590537c91b8c2d86af896fbcbaf0d5ed7fdcdd77f7d8f3467ba0
     # via -r packages/langchain-core/requirements.in
-langsmith==0.4.5 \
+langsmith==0.4.38 \
     --hash=sha256:4167717a2cccc4dff5809dbddc439628e836f6fd13d4fdb31ea013bc8d5cfaf5 \
     --hash=sha256:49444bd8ccd4e46402f1b9ff1d686fa8e3a31b175e7085e72175ab8ec6164a34
     # via langchain-core

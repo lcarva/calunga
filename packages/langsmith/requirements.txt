@@ -132,7 +132,7 @@ idna==3.10 \
     #   anyio
     #   httpx
     #   requests
-langsmith==0.4.5 \
+langsmith==0.4.38 \
     --hash=sha256:4167717a2cccc4dff5809dbddc439628e836f6fd13d4fdb31ea013bc8d5cfaf5 \
     --hash=sha256:49444bd8ccd4e46402f1b9ff1d686fa8e3a31b175e7085e72175ab8ec6164a34
     # via -r packages/langsmith/requirements.in
