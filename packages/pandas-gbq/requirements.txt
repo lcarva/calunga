@@ -110,7 +110,7 @@ db-dtypes==1.4.3 \
     --hash=sha256:a1c92b819af947fae1701d80a71f2a0eac08f825ca52cf0c68aeba80577ae966 \
     --hash=sha256:d3cb08c32939d24e05501f17694be8c1c54cfb4620d61fb56fb311e8c3d8885e
     # via pandas-gbq
-google-api-core[grpc]==2.25.1 \
+google-api-core[grpc]==2.27.0 \
     --hash=sha256:8a2a56c1fef82987a524371f99f3bd0143702fecc670c72e600c1cda6bf8dbb7 \
     --hash=sha256:d2aaa0b13c78c61cb3f4282c464c046e45fbd75755683c9c525e6e8f7ed0a5e8
     # via
