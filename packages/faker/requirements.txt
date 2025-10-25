@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=./packages/faker/requirements.txt ./packages/faker/requirements.in
 #
-faker==37.4.0 \
+faker==37.12.0 \
     --hash=sha256:7f69d579588c23d5ce671f3fa872654ede0e67047820255f43a4aa1925b89780 \
     --hash=sha256:cb81c09ebe06c32a10971d1bbdb264bb0e22b59af59548f011ac4809556ce533
     # via -r ./packages/faker/requirements.in
