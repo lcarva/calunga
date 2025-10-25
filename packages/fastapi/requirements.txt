@@ -12,7 +12,7 @@ anyio==4.9.0 \
     --hash=sha256:673c0c244e15788651a4ff38710fea9675823028a6f08a5eda409e0c9840a028 \
     --hash=sha256:9f76d541cad6e36af7beb62e978876f3b41e3e04f2c1fbf0884604c0a9c4d93c
     # via starlette
-fastapi==0.116.0 \
+fastapi==0.120.0 \
     --hash=sha256:80dc0794627af0390353a6d1171618276616310d37d24faba6648398e57d687a \
     --hash=sha256:fdcc9ed272eaef038952923bef2b735c02372402d1203ee1210af4eea7a78d2b
     # via -r ./packages/fastapi/requirements.in
