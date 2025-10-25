@@ -110,7 +110,7 @@ google-ads==27.0.0 \
     --hash=sha256:4c8c9570b49b57fa1e90c7f90f2a9c6d399ae0ebd05f3a8dd8de4593a2f446ae \
     --hash=sha256:c6c6265f2e5d91caac6426bdae2a17bd104f38cafff21b1e2def01a994bc0131
     # via -r ./packages/google-ads/requirements.in
-google-api-core==2.25.1 \
+google-api-core==2.27.0 \
     --hash=sha256:8a2a56c1fef82987a524371f99f3bd0143702fecc670c72e600c1cda6bf8dbb7 \
     --hash=sha256:d2aaa0b13c78c61cb3f4282c464c046e45fbd75755683c9c525e6e8f7ed0a5e8
     # via google-ads

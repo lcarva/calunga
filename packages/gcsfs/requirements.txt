@@ -326,7 +326,7 @@ gcsfs==2025.5.1 \
     --hash=sha256:48712471ff71ac83d3e2152ba4dc232874698466e344d5e700feba06b0a0de7b \
     --hash=sha256:ba945530cf4857cd9d599ccb3ae729c65c39088880b11c4df1fecac30df5f3e3
     # via -r packages/gcsfs/requirements.in
-google-api-core==2.25.1 \
+google-api-core==2.27.0 \
     --hash=sha256:8a2a56c1fef82987a524371f99f3bd0143702fecc670c72e600c1cda6bf8dbb7 \
     --hash=sha256:d2aaa0b13c78c61cb3f4282c464c046e45fbd75755683c9c525e6e8f7ed0a5e8
     # via
