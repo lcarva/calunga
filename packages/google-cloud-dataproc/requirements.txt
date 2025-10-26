@@ -116,7 +116,7 @@ google-auth==2.40.3 \
     # via
     #   google-api-core
     #   google-cloud-dataproc
-google-cloud-dataproc==5.21.0 \
+google-cloud-dataproc==5.23.0 \
     --hash=sha256:2d2a0cc6ab99ac9541f73d2e211a851fa4d0a75f1bb51b23c24defc86cd6c4fa \
     --hash=sha256:824e9d1de04938c6e9d68b6ae4c41b769482d571e6dbef0e5b74d87678ac0fc4
     # via -r ./packages/google-cloud-dataproc/requirements.in
