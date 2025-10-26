@@ -125,7 +125,7 @@ google-cloud-appengine-logging==1.6.2 \
     --hash=sha256:2b28ed715e92b67e334c6fcfe1deb523f001919560257b25fc8fcda95fd63938 \
     --hash=sha256:4890928464c98da9eecc7bf4e0542eba2551512c0265462c10f3a3d2a6424b90
     # via google-cloud-logging
-google-cloud-audit-log==0.3.2 \
+google-cloud-audit-log==0.4.0 \
     --hash=sha256:2598f1533a7d7cdd6c7bf448c12e5519c1d53162d78784e10bcdd1df67791bc3 \
     --hash=sha256:daaedfb947a0d77f524e1bd2b560242ab4836fe1afd6b06b92f152b9658554ed
     # via google-cloud-logging
