@@ -119,7 +119,7 @@ google-auth==2.40.3 \
     #   google-api-core
     #   google-cloud-bigtable
     #   google-cloud-core
-google-cloud-bigtable==2.31.0 \
+google-cloud-bigtable==2.34.0 \
     --hash=sha256:80c812a33aa22dfb32b6ab1af624921bb97bc6c82336906c1a2c368aefbdc21b \
     --hash=sha256:d01c5da676caf26a26599fc76bfe513184840b476e753bbe55d802ffd359b544
     # via -r ./packages/google-cloud-bigtable/requirements.in
