@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=packages/google-cloud-audit-log/requirements.txt packages/google-cloud-audit-log/requirements.in
 #
-google-cloud-audit-log==0.3.2 \
+google-cloud-audit-log==0.4.0 \
     --hash=sha256:2598f1533a7d7cdd6c7bf448c12e5519c1d53162d78784e10bcdd1df67791bc3 \
     --hash=sha256:daaedfb947a0d77f524e1bd2b560242ab4836fe1afd6b06b92f152b9658554ed
     # via -r packages/google-cloud-audit-log/requirements.in
