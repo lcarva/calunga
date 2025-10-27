@@ -116,7 +116,7 @@ google-auth==2.40.3 \
     # via
     #   google-api-core
     #   google-cloud-resource-manager
-google-cloud-resource-manager==1.14.2 \
+google-cloud-resource-manager==1.15.0 \
     --hash=sha256:962e2d904c550d7bac48372607904ff7bb3277e3bb4a36d80cc9a37e28e6eb74 \
     --hash=sha256:d0fa954dedd1d2b8e13feae9099c01b8aac515b648e612834f9942d2795a9900
     # via -r ./packages/google-cloud-resource-manager/requirements.in
