@@ -116,7 +116,7 @@ google-auth==2.40.3 \
     # via
     #   google-api-core
     #   google-cloud-secret-manager
-google-cloud-secret-manager==2.24.0 \
+google-cloud-secret-manager==2.25.0 \
     --hash=sha256:9bea1254827ecc14874bc86c63b899489f8f50bfe1442bfb2517530b30b3a89b \
     --hash=sha256:ce573d40ffc2fb7d01719243a94ee17aa243ea642a6ae6c337501e58fbf642b5
     # via -r packages/google-cloud-secret-manager/requirements.in
